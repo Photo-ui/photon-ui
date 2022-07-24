@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  margin: 0; font-family: 'Poppins', sans-serif !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+*{
+  outline: none !important;
+}
+
+*::-webkit-scrollbar-track
+{
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb
+{
+  background-color: #bfbfbf;
+  border: 2px solid #bfbfbf;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}

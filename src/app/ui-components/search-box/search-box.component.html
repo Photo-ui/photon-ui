@@ -1,0 +1,39 @@
+<div class="relative w-full">
+    <div class="flex w-full border py-3 px-4 rounded-lg justify-between space-x-4 bg-white z-0">
+        <input [readOnly]="!searchable" [(ngModel)]="displayLabel" (ngModelChange)="searchList($event)" searchbox="pi-search-box" class="outline-none border-0 w-full"
+               placeholder="{{placeholder}}" [id]="id">
+        <div *ngIf="showIcon">
+            <div class="flex flex-wrap content-center h-full">
+                <img src="assets/select-box/search-icon.png" class="w-4" alt="image">
+            </div>
+        </div>
+    </div>
+    <div class="absolute border w-full divide-y bg-white z-10 search-drop-container {{id}} hidden" >
+        <ng-container *ngIf="showAddButton">
+            <div *ngIf="data.length === 0" class="p-2 flex space-x-2 cursor-pointer" (click)="addNew()">
+                <div>
+                    <div class="flex flex-wrap content-center h-full space-x-2">
+                        <img src="assets/select-box/plus.png" class="w-5" alt="image">
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-wrap content-center h-full w-full">
+                        <label class="text-lg w-52 truncate" *ngIf="displayLabel">{{displayLabel}}</label>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="data.length > 0">
+            <ng-container *ngFor="let item of data">
+                <div (click)="selectItem(item)" class="p-2 cursor-pointer hover:bg-gray-200">
+                    {{item.value}}
+                </div>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="data.length === 0">
+            <div class="py-6 cursor-pointer text-center">
+                List is empty
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="w-full">
+    <div class="border bg-gray-600 w-full rounded-lg text-white" >
+        <div class="h-auto w-full border-b flex justify-between px-4 py-2 ">
+            <div>
+                <div class="flex flex-wrap content-center h-full space-x-2">
+                    <div class="bg-red-500 p-1.5 rounded-full"></div>
+                    <div class="bg-yellow-300 p-1.5 rounded-full"></div>
+                    <div class="bg-green-500 p-1.5 rounded-full"></div>
+                </div>
+            </div>
+            <div [class.py-4]="!canCopy">
+                <i *ngIf="canCopy" class="pi pi-copy text-2xl cursor-pointer" title="copy" [cdkCopyToClipboard]="textToCopy"></i>
+            </div>
+        </div>
+        <div class="p-4 text-sm">
+            <code >
+                <ng-content></ng-content>
+            </code>
+        </div>
+    </div>
+</div>
