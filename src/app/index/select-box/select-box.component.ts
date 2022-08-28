@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {SearchItem} from "../../ui-components/search-box/search-item";
 import {SelectBoxService} from "./select-box.service";
 
 @Component({

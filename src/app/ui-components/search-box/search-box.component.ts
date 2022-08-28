@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, EventEmitter, forwardRef, Input, OnInit, Output} from '@angular/core';
 import {SearchItem} from "./search-item";
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {BaseService} from "../base.service";
 
 @Component({
   selector: 'pi-search-box',
@@ -15,7 +16,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
   ]
 })
 export class SearchBoxComponent implements OnInit, ControlValueAccessor, AfterViewInit {
-  @Input() id: string = crypto.randomUUID();
+  @Input() id: string = BaseService.uuid();
   @Input() placeholder: string = '';
   @Input() data: Array<SearchItem> = [];
   @Input() showAddButton = true;
@@ -63,6 +64,7 @@ export class SearchBoxComponent implements OnInit, ControlValueAccessor, AfterVi
   }
 
   writeValue(obj: any): void {
+    // this.selectItem(obj);
   }
 
   ngAfterViewInit(): void {

@@ -11,6 +11,12 @@ body, html {
   -webkit-font-smoothing: antialiased !important;
 }
 
+.html-icon {
+  font-family: 'Poppins', serif !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
 *{
   outline: none !important;
 }
@@ -37,4 +43,8 @@ body, html {
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
+}
+
+.img-scale{
+  width: 1.5rem !important;
 }

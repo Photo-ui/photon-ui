@@ -1,0 +1,74 @@
+<div class="flex flex-col w-full h-full p-4 overflow-auto">
+    <h1 class="text-3xl font-light">Check List</h1>
+    <div class="bg-white rounded-xl mt-3 w-full p-4 grow h-full overflow-auto">
+
+        <div class="grid grid-cols-12 h-full gap-x-4 overflow-auto">
+            <div class="col-span-5 flex flex-col w-full h-full space-y-4 overflow-auto">
+                <div class="w-full">
+                    <div class="w-96">
+                        <label class="pb-5 block text-2xl">Basic implementation</label>
+                        <div class="flex space-x-5 mb-4">
+                            <pi-check-box [(ngModel)]="editMode" label="Edit Mode"></pi-check-box>
+                            <pi-check-box [(ngModel)]="viewMode" label="View Mode"></pi-check-box>
+                        </div>
+                        <pi-check-list [editMode]="editMode" [viewMode]="viewMode" [formData]="service.data" (checkListItems)="updateFormOutputText($event)"></pi-check-list>
+                    </div>
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-check-list [editMode]='false' [viewMode]='list' [formData]='data' (checkListItems)='updateFormOutputText($event)'></pi-check-list>">
+                        <pi-code-fix>check-list [editMode]="editMode" [viewMode]="viewMode" [formData]="data" (checkListItems)="updateFormOutputText($event)"</pi-code-fix> <pi-code-fix>/pi-check-list</pi-code-fix>
+                    </pi-code-snippet>
+                    <br>
+                    <pi-code-snippet [canCopy]="false">
+                <pre>
+                    {{service.text}}
+                </pre>
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full">
+                    <p class="pt-4">
+                        This is the structure of the data to be passed to the <pi-quick-code color="primary">&lt;pi-check-list&gt;</pi-quick-code>&nbsp;
+                        <pi-quick-code color="primary">[formData]</pi-quick-code> property.
+                    </p>
+                    <br>
+                    <pi-code-snippet [canCopy]="false">
+                <pre>
+                    {{FormOutputText(service.data)}}
+                </pre>
+                    </pi-code-snippet>
+                    <div class="w-96 mt-4">
+                        <label class="pb-5 block text-2xl">FormConfig <pi-quick-code color="success">class</pi-quick-code> </label>
+                    </div>
+                    <pi-code-snippet [canCopy]="false">
+                <pre>
+                    {{service.formClass}}
+                </pre>
+                    </pi-code-snippet>
+                    <div class="w-96 mt-4">
+                        <label class="pb-5 block text-2xl">FormDefinitions <pi-quick-code color="success">class</pi-quick-code> </label>
+                    </div>
+                    <pi-code-snippet [canCopy]="false">
+                <pre>
+                    {{service.formDefinition}}
+                </pre>
+                    </pi-code-snippet>
+                </div>
+            </div>
+            <div class="col-span-7 border bg-gray-600 rounded-lg text-white flex flex-col w-full h-full overflow-auto">
+                <div class="h-auto w-full border-b flex justify-between px-4 py-2 ">
+                    <div>
+                        <div class="flex flex-wrap content-center h-full space-x-2">
+                            <div class="bg-red-500 p-1.5 rounded-full"></div>
+                            <div class="bg-yellow-300 p-1.5 rounded-full"></div>
+                            <div class="bg-green-500 p-1.5 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 text-sm grow overflow-auto">
+                    <code>
+                        <pre>{{formOutputText}}</pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

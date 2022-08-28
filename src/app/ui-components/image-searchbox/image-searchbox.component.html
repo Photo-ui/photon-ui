@@ -1,0 +1,74 @@
+<div class="relative w-full">
+    <div class="relative">
+        <ng-container *ngIf="showImage">
+            <div *ngIf="selectedItem?.image" class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <div class="w-16 rounded overflow-hidden">
+                    <div [ngStyle]="{'background-image': 'url('+ selectedItem?.image +')'}" class="bg-cover bg-center w-full h-10"></div>
+                </div>
+            </div>
+        </ng-container>
+        <input placeholder="{{placeholder}}"
+               [id]="id"
+               [readOnly]="!searchable"
+               [(ngModel)]="displayLabel"
+               [class.pl-10]="selectedItem?.image"
+               (ngModelChange)="searchList($event)" searchbox="pi-search-box" class="block p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+        <div class="absolute right-2.5 top-0 bottom-0">
+            <div class="flex flex-wrap content-center h-full w-4">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                     width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                       fill="#000000" stroke="none">
+                        <path d="M895 3506 c-67 -29 -105 -105 -90 -183 6 -34 100 -131 843 -875 744 -743 841 -837 875 -843 94 -18 39 -66 949 843 909 909 861 855 843 949 -9 49 -69 109 -118 118 -94 18 -46 59 -875 -768 l-762 -762 -758 757 c-424 424 -769 762 -785 768 -38 14 -85 12 -122 -4z"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="absolute border w-full divide-y bg-white z-10 search-drop-container max-h-60 {{id}} hidden" >
+        <div class="flex-col flex h-full w-full">
+            <div *ngIf="showSearchbox" class="h-auto p-2 w-full" >
+                <div class="relative">
+                    <input placeholder="{{placeholder}}" [(ngModel)]="displayLabel" (ngModelChange)="searchList($event)" searchitem="pi-search-item" class="block p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                    <div class="absolute right-2.5 top-0 bottom-0">
+                        <div class="flex flex-wrap content-center h-full w-4">
+                            <svg id="search" xmlns="http://www.w3.org/2000/svg" width="18.999" height="19.005" viewBox="0 0 18.999 19.005">
+                                <path id="_24be5d6bf49907d701b8c954fb7f4b2b" data-name="24be5d6bf49907d701b8c954fb7f4b2b" d="M3.506,14.312a7.628,7.628,0,0,0,10.087.626l5.052,5.052a.95.95,0,1,0,1.343-1.343l-5.052-5.052a7.638,7.638,0,1,0-11.43.717ZM4.849,4.851a5.74,5.74,0,1,1-1.681,4.06,5.74,5.74,0,0,1,1.681-4.06Z" transform="translate(-1.267 -1.263)" fill="rgba(0,0,0,0.8)"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngIf="showAddButton">
+                <div *ngIf="data.length === 0" class="h-auto p-2 flex space-x-2 cursor-pointer" (click)="addNew()">
+                    <div>
+                        <div class="flex flex-wrap content-center h-full space-x-2">
+                            <img src="assets/image-select-box/plus.png" class="w-5" alt="image">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap content-center h-full w-full">
+                            <label class="text-lg w-52 truncate" *ngIf="displayLabel">{{displayLabel}}</label>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="data.length > 0">
+                <div class="grow w-full h-full overflow-auto">
+                    <ng-container *ngFor="let item of data">
+                        <div (click)="selectItem(item)" class="p-2 cursor-pointer hover:bg-gray-200">
+                            {{item.value}}
+                        </div>
+                    </ng-container>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="data.length === 0">
+                <div class="py-6 cursor-pointer text-center">
+                    List is empty
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

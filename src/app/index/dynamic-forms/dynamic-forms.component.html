@@ -1,0 +1,135 @@
+<div class="flex flex-col w-full h-full p-4 overflow-auto">
+    <h1 class="text-3xl font-light">Dynamic Forms</h1>
+    <div class="bg-white rounded-xl mt-3 w-full p-4 grow h-full overflow-auto">
+
+        <div class="grid grid-cols-12 h-full gap-x-4 overflow-auto">
+            <div class="col-span-2 flex flex-col w-full h-full space-y-4">
+                <div class="h-auto">
+                    <pi-input floatingLabel="inline" [(ngModel)]="form.title" (ngModelChange)="updateFormOutputText()" label="Form Title"></pi-input>
+                </div>
+                <div class="relative w-full grow h-full bg-white bg-gray-200 rounded-lg divide-y divide-gray-300">
+                    <h1 class="p-2 text-xl font-semibold">Form Elements</h1>
+                    <div class="flex cursor-pointer w-full py-3 px-2 space-x-3 text-sm hover:font-bold" (click)="addCheckBox()">
+                        <div class="flex cursor-pointer flex-col">
+                            <div class="flex flex-wrap content-center h-full">
+                                <i class="pi pi-plus"></i>
+                            </div>
+                        </div>
+                        <div class="cursor-pointer flex flex-wrap content-center h-full">
+                            <label class="cursor-pointer" >CHECK BOX</label>
+                        </div>
+                    </div>
+                    <div class="flex cursor-pointer w-full py-3 px-2 space-x-3 text-sm hover:font-bold" (click)="addInputBox()">
+                        <div class="flex flex-col cursor-pointer">
+                            <div class="flex flex-wrap content-center cursor-pointer h-full">
+                                <i class="pi pi-plus"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap content-center cursor-pointer h-full">
+                            <label>INPUT BOX</label>
+                        </div>
+                    </div>
+                    <div class="flex cursor-pointer w-full py-3 px-2 space-x-3 text-sm hover:font-bold" (click)="addTextAreaBox()">
+                        <div class="flex flex-col cursor-pointer">
+                            <div class="flex flex-wrap cursor-pointer content-center h-full">
+                                <i class="pi pi-plus"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap cursor-pointer content-center h-full">
+                            <label>TEXT AREA</label>
+                        </div>
+                    </div>
+                    <div class="flex cursor-pointer w-full py-3 px-2 space-x-3 text-sm hover:font-bold">
+                        <div class="flex flex-col">
+                            <div class="flex flex-wrap content-center h-full">
+                                <i class="pi pi-plus"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap content-center h-full">
+                            <label>SELECT BOX</label>
+                        </div>
+                    </div>
+                    <div class="flex cursor-pointer w-full py-3 px-2 space-x-3 text-sm hover:font-bold">
+                        <div class="flex flex-col">
+                            <div class="flex flex-wrap content-center h-full">
+                                <i class="pi pi-plus"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap content-center h-full">
+                            <label>IMAGE UPLOAD</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3 border rounded-lg flex flex-col w-full h-full space-y-2 px-4 py-2 overflow-auto">
+                <div class="h-auto py-4">
+                    <h1 class="p-2 text-xl font-semibold">{{form.title}}</h1>
+                </div>
+                <div class="relative w-full grow h-full bg-white space-y-3">
+                    <ng-container *ngFor="let element of form.definitions">
+                        <ng-container *ngIf="element.type === 'bool'">
+                            <div class="w-full hover:border hover:border-blue-700 p-2 rounded-lg"
+                                 [class.border]="element.key === selectedForm.key"
+                                 [class.border-blue-700]="element.key === selectedForm.key"
+                                 (click)="selectItem(element)">
+                                <pi-check-box [disabled]="true" [label]="element.label"></pi-check-box>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="element.type === 'string'">
+                            <div class="w-full hover:border hover:border-blue-700 p-2 rounded-lg"
+                                 [class.border]="element.key === selectedForm.key"
+                                 [class.border-blue-700]="element.key === selectedForm.key"
+                                 (click)="selectItem(element)">
+                                <pi-input [label]="element.label" floatingLabel="inline"></pi-input>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="element.type === 'multiline'">
+                            <div class="w-full hover:border hover:border-blue-700 p-2 rounded-lg"
+                                 [class.border]="element.key === selectedForm.key"
+                                 [class.border-blue-700]="element.key === selectedForm.key"
+                                 (click)="selectItem(element)">
+                                <pi-text-area [label]="element.label" floatingLabel="inline"></pi-text-area>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                </div>
+
+            </div>
+            <div class="col-span-3 border rounded-lg flex flex-col w-full h-full space-y-2 px-4 py-2 overflow-auto">
+                <div class="h-auto">
+                    <h1 class="p-2 text-xl font-semibold">Element Definition</h1>
+                </div>
+                <div class="relative w-full grow h-full bg-white space-y-4">
+                   <ng-container *ngIf="selectedForm">
+                       <div>
+                           <pi-input label="ITEM NAME" floatingLabel="inline" [(ngModel)]="selectedForm.label" (ngModelChange)="updateFormOutputText()"></pi-input>
+                       </div>
+                       <div>
+                           <pi-check-box label="REQUIRED" [(ngModel)]="selectedForm.required" (ngModelChange)="updateFormOutputText()"></pi-check-box>
+                       </div>
+                   </ng-container>
+                </div>
+            </div>
+            <div class="col-span-4 border bg-gray-600 rounded-lg text-white flex flex-col w-full h-full overflow-auto">
+                <div class="h-auto w-full border-b flex justify-between px-4 py-2 ">
+                    <div>
+                        <div class="flex flex-wrap content-center h-full space-x-2">
+                            <div class="bg-red-500 p-1.5 rounded-full"></div>
+                            <div class="bg-yellow-300 p-1.5 rounded-full"></div>
+                            <div class="bg-green-500 p-1.5 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 text-sm grow overflow-auto">
+                    <code>
+                        <pre>{{formOutputText}}</pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

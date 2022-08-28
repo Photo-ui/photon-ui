@@ -1,0 +1,81 @@
+<div class="flex flex-col w-full h-full p-4 overflow-auto">
+    <h1 class="text-3xl font-light text-2xl">Image Select Box</h1>
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div class="w-96">
+                <label class="pb-5 block text-2xl">Basic implementation</label>
+                <pi-image-searchbox [showAddButton]="false" [data]="service.list" placeholder="Search Names"></pi-image-searchbox>
+            </div>
+            <br>
+            <pi-code-snippet textToCopy="<pi-image-searchbox [showAddButton]='false' [data]='list' placeholder='Search Names'></pi-image-searchbox>">
+                <pi-code-fix>pi-image-searchbox [showAddButton]="false" [data]="list" placeholder="Search Names"</pi-code-fix> <pi-code-fix>/pi-image-searchbox</pi-code-fix>
+            </pi-code-snippet>
+            <br>
+            <pi-code-snippet [canCopy]="false">
+                <pre>
+                    {{service.text}}
+                </pre>
+            </pi-code-snippet>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div>
+                <label class="pb-5 block text-2xl">Search Implementation</label>
+                <div class="w-96">
+                    <pi-image-searchbox [showAddButton]="false" [data]="service.list" placeholder="Search Names" [searchable]="true" [showIcon]="true"></pi-image-searchbox>
+                </div>
+            </div>
+            <p class="pt-4">
+                To implement search you will need to add the searchable attribute this way <pi-quick-code color="danger">[searchable]="true"</pi-quick-code> .
+            </p>
+            <p class="pt-2">
+                This filters the <pi-quick-code color="primary">value</pi-quick-code> field of the <pi-quick-code color="primary">SearchItem class</pi-quick-code>
+            </p>
+            <br>
+            <pi-code-snippet textToCopy="<pi-image-searchbox [showAddButton]='false' [data]='list' placeholder='Search Names' [searchable]='true' [showIcon]='true'></pi-image-searchbox>">
+                <pi-code-fix>pi-image-searchbox [showAddButton]="false" [data]="list" placeholder="Search Names" [searchable]="true" [showIcon]="true"</pi-code-fix> <pi-code-fix>/pi-image-searchbox</pi-code-fix>
+            </pi-code-snippet>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div class="w-auto">
+                <label class="pb-5 block text-2xl">Search with Add New Implementation</label>
+                <div class="w-96">
+                    <pi-image-searchbox [showAddButton]="true" [data]="service.list" placeholder="Search Names" [searchable]="true" [showIcon]="true"></pi-image-searchbox>
+                </div>
+            </div>
+            <p class="pt-4">
+                For this implementation you have to enable <pi-quick-code color="danger">[showAddButton]="true"</pi-quick-code> .
+            </p>
+            <p class="pt-2">
+                This filters the <pi-quick-code color="primary">value</pi-quick-code> field of the <pi-quick-code color="primary">SearchItem class</pi-quick-code>
+            </p>
+            <br>
+            <pi-code-snippet textToCopy="<pi-image-searchbox [showAddButton]='false' [data]='list' placeholder='Search Names' [searchable]='true' [showIcon]='true'></pi-image-searchbox>">
+                <pi-code-fix>pi-image-searchbox [showAddButton]="false" [data]="list" placeholder="Search Names" [searchable]="true" [showIcon]="true"</pi-code-fix> <pi-code-fix>/pi-image-searchbox</pi-code-fix>
+            </pi-code-snippet>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div class="w-96">
+                <label class="pb-5 block text-2xl">ImageSearchboxItem <pi-quick-code color="success">class</pi-quick-code> </label>
+            </div>
+            <p class="pt-4">
+                This is the structure of the list to be passed to the <pi-quick-code color="primary">&lt;pi-image-searchbox&gt;</pi-quick-code>&nbsp;
+                <pi-quick-code color="primary">[data]</pi-quick-code> property.
+            </p>
+            <br>
+            <pi-code-snippet [canCopy]="false">
+                <pre>
+                    {{service.searchItemText}}
+                </pre>
+            </pi-code-snippet>
+        </div>
+    </div>
+</div>
