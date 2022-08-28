@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
 export class IndexService {
 public menu = [
   {
+    path: '/button',
+    title: 'Button'
+  },
+  {
     path: '/input',
     title: 'Input'
   },

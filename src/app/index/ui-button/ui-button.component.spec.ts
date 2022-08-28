@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PiButtonComponent } from './pi-button.component';
+import { UiButtonComponent } from './ui-button.component';
 
-describe('PiButtonComponent', () => {
-  let component: PiButtonComponent;
-  let fixture: ComponentFixture<PiButtonComponent>;
+describe('UiButtonComponent', () => {
+  let component: UiButtonComponent;
+  let fixture: ComponentFixture<UiButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PiButtonComponent ]
+      declarations: [ UiButtonComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PiButtonComponent);
+    fixture = TestBed.createComponent(UiButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

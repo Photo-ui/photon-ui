@@ -9,6 +9,7 @@ export class ButtonComponent implements OnInit {
   @Input() size: 'small' | 'normal' | 'large' | undefined;
   @Input() type: 'primary' | 'success' | 'danger' | 'warning' | 'info' | undefined;
   @Input() block: '' | undefined;
+  @Input() disabled: any = false;
   constructor() { }
 
   ngOnInit(): void {

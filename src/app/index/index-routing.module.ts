@@ -7,6 +7,7 @@ import {DynamicFormsComponent} from "./dynamic-forms/dynamic-forms.component";
 import {UiCheckListComponent} from "./ui-check-list/ui-check-list.component";
 import {UiModalComponent} from "./ui-modal/ui-modal.component";
 import {UiInputComponent} from "./ui-input/ui-input.component";
+import {UiButtonComponent} from "./ui-button/ui-button.component";
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'dynamic-forms',
         component: DynamicFormsComponent
+      },
+      {
+        path: 'button',
+        component: UiButtonComponent
       }
     ]
   },

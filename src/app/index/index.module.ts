@@ -7,7 +7,6 @@ import {UiComponentsModule} from "../ui-components/ui-components.module";
 import {ClipboardModule} from "@angular/cdk/clipboard";
 import { ImageSelectBoxComponent } from './image-select-box/image-select-box.component';
 import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
-import { PiButtonComponent } from './pi-button/pi-button.component';
 import {FormsModule} from "@angular/forms";
 import { PiTextareaComponent } from './pi-textarea/pi-textarea.component';
 import {OverlayModule} from "@angular/cdk/overlay";
@@ -18,6 +17,7 @@ import { UiCheckListComponent } from './ui-check-list/ui-check-list.component';
 import { UiModalComponent } from './ui-modal/ui-modal.component';
 import { UiInputComponent } from './ui-input/ui-input.component';
 import {PiCheckListModule} from "../ui-components/pi-check-list/pi-check-list.module";
+import { UiButtonComponent } from './ui-button/ui-button.component';
 
 
 @NgModule({
@@ -26,11 +26,11 @@ import {PiCheckListModule} from "../ui-components/pi-check-list/pi-check-list.mo
     SelectBoxComponent,
     ImageSelectBoxComponent,
     DynamicFormsComponent,
-    PiButtonComponent,
     PiTextareaComponent,
     UiCheckListComponent,
     UiModalComponent,
-    UiInputComponent
+    UiInputComponent,
+    UiButtonComponent
   ],
     imports: [
         CommonModule,

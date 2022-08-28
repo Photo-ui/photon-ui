@@ -1,0 +1,121 @@
+<div class="flex flex-col w-full h-full p-4 overflow-auto">
+    <h1 class="text-3xl font-light text-2xl">Button</h1>
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div class="w-full">
+                <label class="pb-5 block text-2xl">Basic implementation</label>
+                <label class="pb-5 block text-xl">Primary Button</label>
+                <div class="flex space-x-4">
+                    <pi-button size="small">
+                        SUBMIT
+                    </pi-button>
+                    <pi-button>
+                        SUBMIT
+                    </pi-button>
+                    <pi-button size="large">
+                        SUBMIT
+                    </pi-button>
+                </div>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button size='small'>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button size="small"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button size='large'>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button size="large"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+            </div>
+            <div class="w-full mt-4">
+                <label class="pb-5 block text-xl">Danger Button</label>
+                <div class="flex space-x-4">
+                    <pi-button size="small" type="danger">
+                        SUBMIT
+                    </pi-button>
+                    <pi-button type="danger">
+                        SUBMIT
+                    </pi-button>
+                    <pi-button size="large" type="danger">
+                        SUBMIT
+                    </pi-button>
+                </div>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button type='danger'>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button type="danger"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+            </div>
+            <div class="w-full mt-4">
+                <label class="pb-5 block text-xl">Info Button</label>
+                <div class="flex space-x-4">
+                    <pi-button size="small" type="info" >
+                        SUBMIT
+                    </pi-button>
+                    <pi-button type="info">
+                        SUBMIT
+                    </pi-button>
+                    <pi-button size="large" type="info">
+                        SUBMIT
+                    </pi-button>
+                </div>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button type='info'>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button type="info"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+            </div>
+            <div class="w-full mt-4">
+                <label class="pb-5 block text-xl">Warning Button</label>
+                <div class="flex space-x-4">
+                    <pi-button size="small" type="warning" >
+                        SUBMIT
+                    </pi-button>
+                    <pi-button type="warning">
+                        SUBMIT
+                    </pi-button>
+                    <pi-button size="large" type="warning">
+                        SUBMIT
+                    </pi-button>
+                </div>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button type='warning'>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button type="warning"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+            </div>
+            <div class="w-full mt-4">
+                <label class="pb-5 block text-xl">Disabled Button</label>
+                <div class="flex space-x-4">
+                    <pi-button disabled="">
+                        SUBMIT
+                    </pi-button>
+                </div>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button disabled=''>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button disabled=""</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button disabled>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button disabled</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button [disabled]='true'>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button [disabled]='true'</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+            </div>
+            <div class="w-full mt-4">
+                <label class="pb-5 block text-xl">Block Button</label>
+                <div class="w-full">
+                    <pi-button block>
+                        SUBMIT
+                    </pi-button>
+                </div>
+                <br>
+                <pi-code-snippet textToCopy="<pi-button disabled=''>SUBMIT</pi-button>">
+                    <pi-code-fix>pi-button block</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                </pi-code-snippet>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
