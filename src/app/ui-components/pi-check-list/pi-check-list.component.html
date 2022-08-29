@@ -1,5 +1,5 @@
 <div class="relative" *ngIf="!viewMode">
-    <input [(ngModel)]="checkItem" class="block pr-10 p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Check item">
+    <input [(ngModel)]="checkItem" (keydown.enter)="addCheckItem()" class="block pr-10 p-4 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Check item">
     <button [disabled]="!checkItem" (click)="addCheckItem()" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2.5 py-0.5 text-2xl disabled:bg-blue-500">+</button>
 </div>
 <small *ngIf="showError" class="text-red-600">{{errorMessage}}</small>
