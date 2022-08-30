@@ -7,11 +7,8 @@ import {ClipboardModule} from "@angular/cdk/clipboard";
 import { QuickCodeComponent } from './quick-code/quick-code.component';
 import { CodeFixComponent } from './code-fix/code-fix.component';
 import {ImageSearchboxComponent} from "./image-searchbox/image-searchbox.component";
-import { ModalComponent } from './modal/modal.component';
-import {OverlayModule} from "@angular/cdk/overlay";
 import { DynamicFormsConfigComponent } from './dynamic-forms-config/dynamic-forms-config.component';
 import { TextAreaComponent } from './text-area/text-area.component';
-import {ModalService} from "./modal/modal.service";
 
 
 
@@ -22,14 +19,12 @@ import {ModalService} from "./modal/modal.service";
     QuickCodeComponent,
     ImageSearchboxComponent,
     CodeFixComponent,
-    ModalComponent,
     DynamicFormsConfigComponent,
     TextAreaComponent],
   imports: [
     CommonModule,
     FormsModule,
     ClipboardModule,
-    OverlayModule,
   ],
     exports: [
         SearchBoxComponent,
@@ -37,10 +32,8 @@ import {ModalService} from "./modal/modal.service";
         QuickCodeComponent,
         ImageSearchboxComponent,
         CodeFixComponent,
-        ModalComponent,
         TextAreaComponent
-    ],
-  providers: [ModalService]
+    ]
 })
 export class UiComponentsModule {
   constructor( ) {

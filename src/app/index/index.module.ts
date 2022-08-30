@@ -18,31 +18,34 @@ import { UiModalComponent } from './ui-modal/ui-modal.component';
 import { UiInputComponent } from './ui-input/ui-input.component';
 import {PiCheckListModule} from "../ui-components/pi-check-list/pi-check-list.module";
 import { UiButtonComponent } from './ui-button/ui-button.component';
+import {PiModalModule} from "../ui-components/pi-modal/pi-modal.module";
+import {CompModalComponent} from "./ui-modal/comp-modal/comp-modal.component";
 
 
 @NgModule({
-  declarations: [
-    IndexComponent,
-    SelectBoxComponent,
-    ImageSelectBoxComponent,
-    DynamicFormsComponent,
-    PiTextareaComponent,
-    UiCheckListComponent,
-    UiModalComponent,
-    UiInputComponent,
-    UiButtonComponent
-  ],
+    declarations: [
+        IndexComponent,
+        SelectBoxComponent,
+        ImageSelectBoxComponent,
+        DynamicFormsComponent,
+        PiTextareaComponent,
+        UiCheckListComponent,
+        UiModalComponent,
+        UiInputComponent,
+        UiButtonComponent,
+        CompModalComponent
+    ],
     imports: [
         CommonModule,
         IndexRoutingModule,
         ClipboardModule,
         FormsModule,
-        OverlayModule,
         UiComponentsModule,
         PiButtonModule,
         PiInputModule,
         PiCheckBoxModule,
-        PiCheckListModule
+        PiCheckListModule,
+        PiModalModule
     ]
 })
 export class IndexModule { }

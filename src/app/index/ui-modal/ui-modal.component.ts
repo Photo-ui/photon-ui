@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ModalService} from "../../ui-components/modal/modal.service";
 import {UiModalService} from "./ui-modal.service";
 import {CompModalComponent} from "./comp-modal/comp-modal.component";
+import {ModalService} from "../../ui-components/pi-modal/modal/modal.service";
 
 @Component({
   selector: 'app-ui-modal',

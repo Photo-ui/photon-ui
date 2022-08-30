@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ModalRef} from "../../../ui-components/modal/modal-ref";
+import {ModalRef} from "../../../ui-components/pi-modal/modal/modal-ref";
 
 @Component({
   selector: 'app-comp-modal',
