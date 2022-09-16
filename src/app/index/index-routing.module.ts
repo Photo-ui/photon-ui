@@ -8,6 +8,7 @@ import {UiCheckListComponent} from "./ui-check-list/ui-check-list.component";
 import {UiModalComponent} from "./ui-modal/ui-modal.component";
 import {UiInputComponent} from "./ui-input/ui-input.component";
 import {UiButtonComponent} from "./ui-button/ui-button.component";
+import {UiCarouselComponent} from "./ui-carousel/ui-carousel.component";
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'button',
         component: UiButtonComponent
+      },
+      {
+        path: 'carousel',
+        component: UiCarouselComponent
       }
     ]
   },

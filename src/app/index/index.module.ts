@@ -20,6 +20,7 @@ import {PiCheckListModule} from "../ui-components/pi-check-list/pi-check-list.mo
 import { UiButtonComponent } from './ui-button/ui-button.component';
 import {PiModalModule} from "../ui-components/pi-modal/pi-modal.module";
 import {CompModalComponent} from "./ui-modal/comp-modal/comp-modal.component";
+import { UiCarouselComponent } from './ui-carousel/ui-carousel.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {CompModalComponent} from "./ui-modal/comp-modal/comp-modal.component";
         UiModalComponent,
         UiInputComponent,
         UiButtonComponent,
-        CompModalComponent
+        CompModalComponent,
+        UiCarouselComponent
     ],
     imports: [
         CommonModule,

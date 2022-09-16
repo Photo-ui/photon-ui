@@ -32,6 +32,10 @@ public menu = [
   {
     path: '/dynamic-forms',
     title: 'Dynamic Forms'
+  },
+  {
+    path: '/carousel',
+    title: 'Carousel'
   }
 ]
   constructor() { }
