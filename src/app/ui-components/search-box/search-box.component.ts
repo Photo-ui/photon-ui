@@ -68,6 +68,7 @@ export class SearchBoxComponent implements OnInit, ControlValueAccessor, AfterVi
   }
 
   ngAfterViewInit(): void {
+    console.log(this.id);
     document.getElementById(this.id)?.addEventListener('click', () => {
       const ele = document.getElementsByClassName('search-drop-container');
       for (let i = 0; i< ele.length;i++) {
