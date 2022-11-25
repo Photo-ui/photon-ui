@@ -8,8 +8,6 @@ import {ClipboardModule} from "@angular/cdk/clipboard";
 import { ImageSelectBoxComponent } from './image-select-box/image-select-box.component';
 import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
 import {FormsModule} from "@angular/forms";
-import { PiTextareaComponent } from './pi-textarea/pi-textarea.component';
-import {OverlayModule} from "@angular/cdk/overlay";
 import {PiButtonModule} from "../ui-components/pi-button/pi-button.module";
 import {PiInputModule} from "../ui-components/pi-input/pi-input.module";
 import {PiCheckBoxModule} from "../ui-components/pi-check-box/pi-check-box.module";
@@ -21,6 +19,8 @@ import { UiButtonComponent } from './ui-button/ui-button.component';
 import {PiModalModule} from "../ui-components/pi-modal/pi-modal.module";
 import {CompModalComponent} from "./ui-modal/comp-modal/comp-modal.component";
 import { UiCarouselComponent } from './ui-carousel/ui-carousel.component';
+import { UiTextAreaComponent } from './ui-text-area/ui-text-area.component';
+import {PiTextAreaModule} from "../ui-components/pi-text-area/pi-text-area.module";
 
 
 @NgModule({
@@ -29,13 +29,13 @@ import { UiCarouselComponent } from './ui-carousel/ui-carousel.component';
         SelectBoxComponent,
         ImageSelectBoxComponent,
         DynamicFormsComponent,
-        PiTextareaComponent,
         UiCheckListComponent,
         UiModalComponent,
         UiInputComponent,
         UiButtonComponent,
         CompModalComponent,
-        UiCarouselComponent
+        UiCarouselComponent,
+        UiTextAreaComponent
     ],
     imports: [
         CommonModule,
@@ -47,7 +47,8 @@ import { UiCarouselComponent } from './ui-carousel/ui-carousel.component';
         PiInputModule,
         PiCheckBoxModule,
         PiCheckListModule,
-        PiModalModule
+        PiModalModule,
+        PiTextAreaModule
     ]
 })
 export class IndexModule { }

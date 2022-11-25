@@ -8,7 +8,6 @@ import { QuickCodeComponent } from './quick-code/quick-code.component';
 import { CodeFixComponent } from './code-fix/code-fix.component';
 import {ImageSearchboxComponent} from "./image-searchbox/image-searchbox.component";
 import { DynamicFormsConfigComponent } from './dynamic-forms-config/dynamic-forms-config.component';
-import { TextAreaComponent } from './text-area/text-area.component';
 
 
 
@@ -19,8 +18,7 @@ import { TextAreaComponent } from './text-area/text-area.component';
     QuickCodeComponent,
     ImageSearchboxComponent,
     CodeFixComponent,
-    DynamicFormsConfigComponent,
-    TextAreaComponent],
+    DynamicFormsConfigComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -31,8 +29,7 @@ import { TextAreaComponent } from './text-area/text-area.component';
         CodeSnippetComponent,
         QuickCodeComponent,
         ImageSearchboxComponent,
-        CodeFixComponent,
-        TextAreaComponent
+        CodeFixComponent
     ]
 })
 export class UiComponentsModule {

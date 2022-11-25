@@ -1,7 +1,7 @@
 import {Component, forwardRef, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {TextAreaService} from "./text-area.service";
-import {BaseService} from "../base.service";
+import {BaseService} from "../../base.service";
 
 @Component({
   selector: 'pi-text-area',

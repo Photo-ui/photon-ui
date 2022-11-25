@@ -14,6 +14,10 @@ public menu = [
     title: 'Input'
   },
   {
+    path: '/text-area',
+    title: 'Text Area'
+  },
+  {
     path: '/select-box',
     title: 'Select Box'
   },
@@ -32,10 +36,6 @@ public menu = [
   {
     path: '/dynamic-forms',
     title: 'Dynamic Forms'
-  },
-  {
-    path: '/carousel',
-    title: 'Carousel'
   }
 ]
   constructor() { }

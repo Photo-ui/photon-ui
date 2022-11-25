@@ -1,0 +1,59 @@
+<div class="flex flex-col w-full h-full p-4 overflow-auto">
+    <h1 class="text-3xl font-light text-2xl">Text Area</h1>
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div class="w-96">
+                <label class="pb-5 block text-2xl">Basic implementation</label>
+                <pi-text-area placeholder="Address">
+                    <label class="block mb-2 text-sm font-medium text-gray-900">Address</label>
+                </pi-text-area>
+            </div>
+            <br>
+            <pi-code-snippet textToCopy="<pi-input placeholder='First name'><label>First name</label></pi-input>">
+                <pre>
+<pi-code-fix>pi-text-area placeholder="Address"</pi-code-fix>
+    <pi-code-fix>label</pi-code-fix>Address<pi-code-fix>/label</pi-code-fix>
+<pi-code-fix>/pi-text-area</pi-code-fix>
+                </pre>
+            </pi-code-snippet>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div>
+                <label class="pb-5 block text-2xl">Inline Floating Label</label>
+                <div class="w-96">
+                    <pi-text-area floatingLabel="inline" label="Address">
+                    </pi-text-area>
+                </div>
+            </div>
+            <p class="pt-4">
+                To make the label float inline add the <pi-quick-code color="primary">floatingLabel</pi-quick-code> attribute and set the value to <pi-quick-code color="success">inline</pi-quick-code> this way <pi-quick-code color="danger">floatingLabel="inline"</pi-quick-code> .
+            </p>
+            <br>
+            <pi-code-snippet textToCopy="<pi-text-area label='Address' floatingLabel='inline'></pi-text-area>">
+                <pi-code-fix>pi-text-area label="Address" floatingLabel="inline"</pi-code-fix><pi-code-fix>/pi-text-area</pi-code-fix>
+            </pi-code-snippet>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+        <div class="w-full">
+            <div>
+                <label class="pb-5 block text-2xl">Outline Floating Label</label>
+                <div class="w-96">
+                    <pi-text-area floatingLabel="outline" label="Address">
+                    </pi-text-area>
+                </div>
+            </div>
+            <p class="pt-4">
+                To make the label float outline add the <pi-quick-code color="primary">floatingLabel</pi-quick-code> attribute and set the value to <pi-quick-code color="success">outline</pi-quick-code> this way <pi-quick-code color="danger">floatingLabel="outline"</pi-quick-code> .
+            </p>
+            <br>
+            <pi-code-snippet textToCopy="<pi-text-area label='Address' floatingLabel='outline'></pi-text-area>">
+                <pi-code-fix>pi-text-area label="Address" floatingLabel="outline"</pi-code-fix><pi-code-fix>/pi-text-area</pi-code-fix>
+            </pi-code-snippet>
+        </div>
+    </div>
+</div>
