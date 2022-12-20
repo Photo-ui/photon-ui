@@ -1,0 +1,49 @@
+
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Image Picker</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+                <div class="w-full">
+                    <div class="w-96">
+                        <label class="pb-5 block text-2xl">Basic implementation</label>
+                        <div class="pt-2">
+                            <pi-image-picker [type]="'multiple'" (imageAdded)="images = $event"></pi-image-picker>
+                        </div>
+                        <!--                <div class="pt-2">-->
+                        <!--                    <pi-toggle [(ngModel)]="toggle" (ngModelChange)="comm($event)"></pi-toggle>-->
+                        <!--                </div>-->
+                        <div class="pt-2">
+                            <!--                    <pi-card-->
+                            <!--                            [rounded]="false"-->
+                            <!--                            subtitle="Product"-->
+                            <!--                            body="Tailwind CSS rating - Free Examples & Tutorial-->
+                            <!--                            https://tailwind-elements.com/docs/standard/components/rating-->
+                            <!--                            Responsive rating built with Tailwind CSS. Rating shows the opinion of others and their experience with the product, you can use stars or other custom icons in it. Basic Rating is useful for references where there are opinions and experiences, allowing the user to give their own"-->
+                            <!--                            title="Review rtdvbbd fghghghgh dhghghgdhgh dfgfgdgfgfgfg"-->
+                            <!--                            image="https://images.pexels.com/photos/14417246/pexels-photo-14417246.jpeg"></pi-card>-->
+
+                        </div>
+                        <!--                <pi-ratings size="10"></pi-ratings>-->
+                    </div>
+                    <br>
+                    <pi-code-snippet [textToCopy]="service.textComp">
+                        <pre>
+                            {{service.textComp}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                    <pi-code-snippet [canCopy]="false">
+                        <pre>
+                            {{service.text}}
+                        </pre>
+                    </pi-code-snippet>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>
+

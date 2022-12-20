@@ -1,11 +1,21 @@
 import {Component, OnInit, TemplateRef, Type} from '@angular/core';
 import {ModalButtons} from "./modal-buttons";
 import {ModalRef} from "./modal-ref";
+import {animate, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  styleUrls: ['./modal.component.scss'],
+  animations: [trigger('enterLeave', [
+    transition(':enter', [
+      style({ transform: 'scale(0%)' }),
+      animate('250ms ease-in')
+    ]),
+    transition(':leave', [
+      animate('100ms ease-out', style({ transform: 'scale(0%)' }))
+    ])
+  ])]
 })
 export class ModalComponent implements OnInit {
   contentType!: 'template' | 'string' | 'component';
@@ -15,7 +25,16 @@ export class ModalComponent implements OnInit {
   backdropClose: boolean | undefined = true;
   buttons: Array<ModalButtons> = [];
   context: any;
-  constructor(private ref: ModalRef) { }
+  modalCss = '';
+
+  open = true;
+  constructor(private ref: ModalRef) {
+    this.ref.afterClosed$.subscribe({
+      next: (() => {
+        this.open = false;
+      })
+    })
+  }
 
   close() {
     this.ref.close(null);
@@ -25,6 +44,16 @@ export class ModalComponent implements OnInit {
     this.content = this.ref.modal.content;
     this.modalSize = this.ref.modal.size;
     this.fullScreen = this.ref.modal.fullScreen;
+    if (this.fullScreen) {
+      this.modalCss = 'w-screen h-screen'
+    } else {
+      if (this.modalSize === 'large') {
+        this.modalCss = 'w-full md:w-11/12';
+      }
+      if (this.modalSize === 'normal') {
+        this.modalCss = 'w-full sm:w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12';
+      }
+    }
     if (this.ref.modal.backdropClose === undefined) {
       this.backdropClose = true;
     } else {
@@ -44,7 +73,6 @@ export class ModalComponent implements OnInit {
       };
     } else {
       this.contentType = 'component';
-      console.log(this.contentType, this.content);
     }
   }
 

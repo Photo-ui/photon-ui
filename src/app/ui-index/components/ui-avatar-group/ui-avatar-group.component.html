@@ -1,0 +1,89 @@
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Avatar Group</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+                <div class="w-full">
+                    <label class="pb-5 block text-2xl">Basic implementation</label>
+                    <div class="flex space-x-4 items-center">
+                       <pi-avatar-group [images]="images" rounded></pi-avatar-group>
+                    </div>
+                    <p class="pt-4">
+                        <span>With group avatar we provide a list of images to the <pi-quick-code color="primary">[images]</pi-quick-code>
+                            property which is displayed in a stacked order.</span>
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avGrp">
+                        <pre>
+                            {{avGrp}}
+                        </pre>
+                        <pre>
+                            {{avGrpComponent}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Rounded, Default and None Avatar</label>
+                    <p>
+                        <pi-avatar-group [images]="images" rounded></pi-avatar-group>
+                        <span>This is an avatar group with the <pi-quick-code color="primary">rounded</pi-quick-code> property.</span>
+                        This property ensures the borders of the avatar group are fully rounded.
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avGrpRounded">
+                        <pre>
+                            {{avGrpRounded}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                    <p>
+                        <pi-avatar-group [images]="images"></pi-avatar-group>
+                        <span>This is an avatar group with the <pi-quick-code color="primary">rounded</pi-quick-code> property not provided</span>.
+                        This property ensures the borders of the avatar group are only rounded at the edges, this is the default property of the avatar group component.
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avGrpNoRounded">
+                        <pre>
+                            {{avGrpNoRounded}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                    <p>
+                        <pi-avatar-group [images]="images" rounded="none"></pi-avatar-group>
+                        <span>This is an avatar group with the <pi-quick-code color="primary">rounded="none"</pi-quick-code> property</span>.
+                        This property ensures the borders of the avatar are not rounded.
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avGrpRoundedNone">
+                        <pre>
+                            {{avGrpRoundedNone}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Max Count</label>
+                    <div class="flex space-x-4 items-center">
+                        <pi-avatar-group [maxCount]="4" [images]="images" rounded></pi-avatar-group>
+                    </div>
+                    <p class="pt-4">
+                        <span>With group avatar we can provide a number to show the number of images we wish to display using the <pi-quick-code color="primary">[maxCount]</pi-quick-code>
+                            property. If the image length is greater than the <pi-quick-code color="primary">[maxCount]</pi-quick-code> property number,
+                            the remaining image count is displayed at the end of the stack.</span>
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avGrpMaxCount">
+                        <pre>
+                            {{avGrpMaxCount}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>

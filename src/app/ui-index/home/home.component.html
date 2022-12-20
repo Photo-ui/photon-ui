@@ -1,0 +1,85 @@
+<div class="bg-gradient-to-b from-cyan-400/20 to-pink-500/20 h-screen w-screen overflow-auto">
+    <app-header></app-header>
+    <div class="flex justify-center w-full h-[500px] items-center">
+        <div class="lg:w-3/6 space-y-5">
+            <h1 class="text-center text-5xl lg:text-7xl font-bold">
+                Angular experimental UI library based on tailwindcss
+            </h1>
+            <h1 class="text-center text-2xl lg:text-2xl text-gray-500 font-bold">
+                This project is still in it's early stages
+            </h1>
+        </div>
+    </div>
+
+    <div class="flex justify-center w-full items-center lg:mt-[50px] lg:mb-[150px]">
+        <div class="xl:w-4/6">
+            <div class="lg:flex lg:justify-between lg:items-center mb-[100px]">
+                <h1 class="text-2xl lg:text-6xl font-extrabold">Components<br>Overview.</h1>
+                <pi-button routerLink="/components" size="small" outline rounded="full">explore more components <i class="ml-2 pi pi-arrow-right"></i></pi-button>
+            </div>
+            <div class="lg:flex lg:justify-between lg:space-x-2">
+                <div>
+                    <div routerLink="/components/buttons">
+                        <span class="lg:ml-5 rounded-xl px-5 py-2.5 text-xl text-blue-700 font-bold border border-blue-700 cursor-pointer">Button</span>
+                    </div>
+                    <div class="rounded-xl bg-gray-600/20 shadow-lg flex items-center justify-center w-80 h-80 mt-5 mb-10 space-x-2">
+                        <pi-button>submit</pi-button>
+                        <pi-button outline rounded="full">submit</pi-button>
+                    </div>
+                </div>
+                <div>
+                    <div routerLink="/components/icon-button">
+                        <span class="ml-5 rounded-xl px-5 py-2.5 text-xl text-blue-700 font-bold border border-blue-700 cursor-pointer">Icon Button</span>
+                    </div>
+                    <div class="rounded-xl bg-gray-600/20 shadow-lg flex items-center justify-center w-80 h-80 mt-5 mb-10 space-x-2">
+                        <pi-icon-button icon="pi pi-arrow-right"></pi-icon-button>
+                        <pi-icon-button rounded="full" outline icon="pi pi-arrow-right"></pi-icon-button>
+                    </div>
+                </div>
+                <div>
+                    <div routerLink="/components/input">
+                        <span class="ml-5 rounded-xl px-5 py-2.5 text-xl text-blue-700 font-bold border border-blue-700 cursor-pointer">Input</span>
+                    </div>
+                    <div class="rounded-xl bg-gray-600/20 shadow-lg flex items-center justify-center w-80 h-80 mt-5 mb-10">
+                        <pi-input>
+                            <label class="text-blue-700">First name</label>
+                        </pi-input>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex lg:justify-between lg:space-x-2">
+                <div>
+                    <div routerLink="/components/text-area">
+                        <span class="lg:ml-5 rounded-xl px-5 py-2.5 text-xl text-blue-700 font-bold border border-blue-700 cursor-pointer">Text Area</span>
+                    </div>
+                    <div class="rounded-xl bg-gray-600/20 shadow-lg flex items-center justify-center w-80 h-80 mt-5 mb-10 overflow-auto">
+                        <pi-text-area>
+                            <label class="text-blue-700">First name</label>
+                        </pi-text-area>
+                    </div>
+                </div>
+                <div>
+                    <div routerLink="/components/check-box">
+                        <span class="ml-5 rounded-xl px-5 py-2.5 text-xl text-blue-700 font-bold border border-blue-700 cursor-pointer">Check Box</span>
+                    </div>
+                    <div class="rounded-xl bg-gray-600/20 shadow-lg flex items-center justify-center w-80 h-80 mt-5 mb-10 ">
+                        <pi-check-box>
+                            <span class="ml-2 text-blue-700">Check me</span>
+                        </pi-check-box>
+                    </div>
+                </div>
+                <div>
+                    <div routerLink="/components/toggle">
+                        <span class="ml-5 rounded-xl px-5 py-2.5 text-xl text-blue-700 font-bold border border-blue-700 cursor-pointer">Toggle</span>
+                    </div>
+                    <div class="rounded-xl bg-gray-600/20 shadow-lg flex items-center justify-center w-80 h-80 mt-5 mb-10">
+                        <div class="flex flex-col">
+                            <pi-toggle [ngModel]="true"></pi-toggle>
+                            <pi-toggle [disabled]="true"></pi-toggle>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

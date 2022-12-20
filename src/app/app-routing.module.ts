@@ -5,7 +5,7 @@ import {AppComponent} from "./app.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/select-box',
+    redirectTo: '/',
     pathMatch: 'full'
   },
   {
@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./index/index.module').then(m => m.IndexModule)
+        loadChildren: () => import('./ui-index/ui-index.module').then(m => m.UiIndexModule)
       }
     ],
   }

@@ -1,0 +1,109 @@
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Avatar</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+                <div class="w-full">
+                    <label class="pb-5 block text-2xl">Basic implementation</label>
+                    <div class="flex space-x-4 items-center">
+                        <pi-avatar [image]="image" size="small" rounded></pi-avatar>
+                        <pi-avatar [image]="image" rounded></pi-avatar>
+                        <pi-avatar [image]="image" size="large" rounded></pi-avatar>
+                        <pi-avatar [image]="image" size="extra large" rounded></pi-avatar>
+                    </div>
+                    <br>
+                    <p class="pt-4 space-x-2">
+                        <span>The avatar component supports four different sizes</span>
+                        <span class="space-x-2">
+                            <pi-quick-code color="primary">small</pi-quick-code>
+                        <pi-quick-code color="primary">normal</pi-quick-code>
+                        <pi-quick-code color="primary">large</pi-quick-code><br>
+                        <pi-quick-code color="primary">extra large</pi-quick-code></span> and it takes a property image
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avSizes">
+                        <pre>
+                            {{avSizes}}
+                        </pre>
+                        <pre>
+                            {{avComponent}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Rounded, Default and None Avatar</label>
+                    <p>
+                        <pi-avatar [image]="image" size="large" rounded></pi-avatar>
+                        <span>This is an avatar with the <pi-quick-code color="primary">rounded</pi-quick-code> property.</span>
+                        This property ensures the borders of the avatar are fully rounded.
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avRounded">
+                        <pre>
+                            {{avRounded}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                    <p>
+                        <pi-avatar [image]="image" size="large" rounded="none"></pi-avatar>
+                        <span>This is an avatar with the <pi-quick-code color="primary">rounded="none"</pi-quick-code> property</span>.
+                        This property ensures the borders of the avatar are not rounded.
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avRoundedNone">
+                        <pre>
+                            {{avRoundedNone}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                    <p>
+                        <pi-avatar [image]="image" size="large"></pi-avatar>
+                        <span>This is an avatar with the <pi-quick-code color="primary">rounded</pi-quick-code> property not provided</span>.
+                        This property ensures the borders of the avatar are only rounded at the edges, this is the default property of the avatar component.
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avNoRounded">
+                        <pre>
+                            {{avNoRounded}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Initials Avatar</label>
+                    <p>
+                        <pi-avatar initials="BO" rounded></pi-avatar>
+                        <span>With this avatar we do not provide an image instead we provide the <pi-quick-code color="primary">initials</pi-quick-code> property.</span>
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avInitials">
+                        <pre>
+                            {{avInitials}}
+                        </pre>
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Empty State Avatar</label>
+                    <div class="flex space-x-4">
+                        <pi-avatar rounded></pi-avatar>
+                        <pi-avatar rounded="none"></pi-avatar>
+                        <pi-avatar ></pi-avatar>
+                    </div>
+                    <p class="pt-4">
+                        <span>This is the default state of an avatar when neither the <pi-quick-code color="primary">initials</pi-quick-code> nor <pi-quick-code color="primary">image</pi-quick-code> property is provided.</span>
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="avEmpty">
+                        <pre>
+                            {{avEmpty}}
+                        </pre>
+                    </pi-code-snippet>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {SearchItem} from "../../ui-components/search-box/search-item";
+import {SearchItem} from "../../ui-components/pi-select-list/search-item";
 import {ImageSearchboxItem} from "../../ui-components/image-searchbox/image-searchbox-item";
 
 @Injectable({

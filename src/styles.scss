@@ -1,18 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;1000&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body, html {
-  margin: 0; font-family: 'Poppins', sans-serif !important;
+  font-family: 'Nunito', sans-serif;
   -moz-osx-font-smoothing: grayscale !important;
   -webkit-font-smoothing: antialiased !important;
 }
 
 .html-icon {
-  font-family: 'Poppins', serif !important;
+  font-family: 'Nunito', sans-serif;
   -moz-osx-font-smoothing: grayscale !important;
   -webkit-font-smoothing: antialiased !important;
 }

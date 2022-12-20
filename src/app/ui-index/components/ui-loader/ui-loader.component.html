@@ -1,0 +1,44 @@
+<pi-loader [show]="show" [loadingMessage]="message"></pi-loader>
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Loader</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+                <div class="w-full">
+                    <div class="w-96">
+                        <label class="pb-5 block text-2xl">Basic implementation</label>
+                        <button (click)="open()" class="text-xs border border-indigo-700 text-white bg-indigo-700 py-2 px-4 rounded-lg"> Show Loader </button>
+                        <div class="py-5 space-y-2">
+                            <div>
+                                <pi-input [(ngModel)]="message">
+                                    <label>Enter a custom loading message</label>
+                                </pi-input>
+                            </div>
+                            <div>
+                                <pi-input type="number" [(ngModel)]="duration">
+                                    <label>Enter a duration</label>
+                                </pi-input>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <pi-code-snippet [textToCopy]="service.textComp">
+                        <pre>
+                            {{service.textComp}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                    <pi-code-snippet [canCopy]="false">
+                        <pre>
+                            {{service.text}}
+                        </pre>
+                    </pi-code-snippet>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>
+

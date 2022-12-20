@@ -1,0 +1,128 @@
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Icon Button</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+                <div class="w-full">
+                    <div class="w-full">
+                        <label class="pb-5 block text-2xl">Basic implementation</label>
+                        <div class="space-x-4">
+                            <pi-icon-button size="small" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button size="large" icon="pi pi-arrow-right"></pi-icon-button>
+                        </div>
+                        <p class="pt-4 space-x-2">
+                            <span>The icon button supports three different sizes</span>
+                            <span class="space-x-2">
+                            <pi-quick-code color="primary">small</pi-quick-code>
+                        <pi-quick-code color="primary">default</pi-quick-code><br>
+                        <pi-quick-code color="primary">large</pi-quick-code></span> .
+                        </p>
+
+                        <br>
+                        <pi-code-snippet [textToCopy]="service.textBasic">
+                            <pre>
+                                {{service.textBasic}}
+                            </pre>
+                        </pi-code-snippet>
+                    </div>
+                    <div class="w-full mt-4">
+                        <label class="pb-5 block text-2xl">Button Rounded</label>
+                        <div class="space-x-4">
+                            <pi-icon-button rounded="full" size="small" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button rounded="full" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button rounded="full" size="large" icon="pi pi-arrow-right"></pi-icon-button>
+                        </div>
+                        <p class="pt-4 space-x-2">
+                            <span>To mark an icon button as rounded add the </span>
+                            <pi-quick-code color="primary">rounded="full"</pi-quick-code> <span>property</span> .
+                        </p>
+                        <br>
+                        <pi-code-snippet [textToCopy]="service.textRounded">
+                            <pre>
+                                {{service.textRounded}}
+                            </pre>
+                        </pi-code-snippet>
+                    </div>
+                    <div class="w-full mt-4">
+                        <label class="pb-5 block text-xl">Button Type</label>
+                        <div class="space-x-4">
+                            <pi-icon-button icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button type="danger" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button type="warning" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button type="success" icon="pi pi-arrow-right"></pi-icon-button>
+                        </div>
+                        <p class="pt-4 space-x-2">
+                            <span>The button supports four different types</span>
+                            <span class="space-x-2"><pi-quick-code color="primary">primary</pi-quick-code>
+                            <pi-quick-code color="danger">danger</pi-quick-code>
+                        <pi-quick-code color="warning">warning</pi-quick-code><br>
+                        <pi-quick-code color="success">success</pi-quick-code></span> .
+                        </p>
+                        <br>
+                        <pi-code-snippet [textToCopy]="service.textTypes">
+                           <pre>
+                               {{service.textTypes}}
+                           </pre>
+                        </pi-code-snippet>
+                    </div>
+                    <div class="w-full mt-4">
+                        <label class="pb-5 block text-xl">Outline Buttons</label>
+                        <div class="space-x-4">
+                            <pi-icon-button outline icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button outline type="danger" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button outline type="warning" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button outline type="success" icon="pi pi-arrow-right"></pi-icon-button>
+                        </div>
+                        <p class="pt-4 space-x-2">
+                            <span>The outline property makes a button background transparent. To mark a button as outline add the </span>
+                            <pi-quick-code color="primary">outline</pi-quick-code> <span>property</span> .
+                        </p>
+                        <br>
+                        <pi-code-snippet [textToCopy]="service.textOutline">
+                            <pre>
+                                {{service.textOutline}}
+                            </pre>
+                        </pi-code-snippet>
+                    </div>
+                    <div class="w-full mt-4">
+                        <label class="pb-5 block text-xl">Disabled Button</label>
+                        <div class="space-x-4">
+                            <pi-icon-button disabled icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button disabled type="danger" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button disabled type="warning" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button disabled type="success" icon="pi pi-arrow-right"></pi-icon-button>
+                        </div>
+                        <br>
+                        <div class="space-x-4">
+                            <pi-icon-button disabled outline icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button disabled outline type="danger" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button disabled outline type="warning" icon="pi pi-arrow-right"></pi-icon-button>
+                            <pi-icon-button disabled outline type="success" icon="pi pi-arrow-right"></pi-icon-button>
+                        </div>
+                        <p class="pt-4 space-x-2">
+                            <span>To disable a button add the </span>
+                            <pi-quick-code color="primary">disabled</pi-quick-code> <span>property or set </span> <pi-quick-code color="primary">[disabled]="true"</pi-quick-code>
+                        </p>
+                        <br>
+                        <pi-code-snippet [textToCopy]="service.textDisableTypes">
+                            <pre>
+                                {{service.textDisableTypes}}
+                            </pre>
+                        </pi-code-snippet>
+                        <br>
+                        <pi-code-snippet [textToCopy]="service.textDisableOutline">
+                            <pre>
+                                {{service.textDisableOutline}}
+                            </pre>
+                        </pi-code-snippet>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>

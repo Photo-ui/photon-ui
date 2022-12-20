@@ -1,5 +1,5 @@
 <div class="w-full">
-    <div class="border bg-gray-600 w-full rounded-lg text-white" >
+    <div class="border bg-gray-800 w-full rounded-lg text-white" >
         <div class="h-auto w-full border-b flex justify-between px-4 py-2 ">
             <div>
                 <div class="flex flex-wrap content-center h-full space-x-2">
@@ -8,12 +8,15 @@
                     <div class="bg-green-500 p-1.5 rounded-full"></div>
                 </div>
             </div>
-            <div [class.py-4]="!canCopy">
-                <i *ngIf="canCopy" class="pi pi-copy text-2xl cursor-pointer" title="copy" [cdkCopyToClipboard]="textToCopy"></i>
+            <div class="flex">
+                <span class="font-thin">{{title}}</span>
+                <div [class.py-4]="!canCopy">
+                    <i *ngIf="canCopy" class="pi pi-copy text-2xl cursor-pointer" title="copy" [cdkCopyToClipboard]="textToCopy"></i>
+                </div>
             </div>
         </div>
-        <div class="p-4 text-sm">
-            <code >
+        <div class="p-4 text-sm break-all overflow-auto">
+            <code>
                 <ng-content></ng-content>
             </code>
         </div>

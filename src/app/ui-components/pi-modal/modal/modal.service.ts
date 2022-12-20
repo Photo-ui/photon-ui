@@ -5,17 +5,14 @@ import {ModalComponent} from "./modal.component";
 import {Modal} from "./modal";
 import {ModalRef} from "./modal-ref";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ModalService {
   constructor(private overlay: Overlay, private injector: Injector) {}
 
   open<R = any, T = any>(modal: Modal<T>): ModalRef<R> {
     const configs = new OverlayConfig({
       hasBackdrop: true,
-      panelClass: ['modal', 'relative'],
-      backdropClass: ['backdrop-blur-[6px]', 'bg-gray-400/30', 'fixed', 'inset-0']
+      backdropClass: ['backdrop-blur-[6px]', 'bg-gray-400/30', 'fixed', 'inset-0', 'z-10']
     });
 
     const overlayRef = this.overlay.create(configs);

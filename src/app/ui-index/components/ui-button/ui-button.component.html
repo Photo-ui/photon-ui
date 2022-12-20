@@ -1,0 +1,225 @@
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Button</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 flex justify-between space-x-12">
+            <div class="w-full">
+                <div class="w-full">
+                    <label class="pb-5 block text-2xl">Basic implementation</label>
+                    <div class="space-x-4">
+                        <pi-button size="extra small">
+                            extra small
+                        </pi-button>
+                        <pi-button size="small">
+                            small
+                        </pi-button>
+                        <pi-button>
+                            default
+                        </pi-button>
+                        <pi-button size="large">
+                            large
+                        </pi-button>
+                        <pi-button size="extra large">
+                            extra large
+                        </pi-button>
+                    </div>
+                    <p class="pt-4 space-x-2">
+                        <span>The button supports five different sizes</span>
+                        <span class="space-x-2"><pi-quick-code color="primary">extra small</pi-quick-code>
+                            <pi-quick-code color="primary">small</pi-quick-code>
+                            <pi-quick-code color="primary">default</pi-quick-code>
+                        <pi-quick-code color="primary">large</pi-quick-code><br>
+                        <pi-quick-code color="primary">extra large</pi-quick-code></span> .
+                    </p>
+
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-button size='small'>SUBMIT</pi-button>">
+                        <pi-code-fix>pi-button size="small"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                    </pi-code-snippet>
+
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Button Rounded</label>
+                    <div class="space-x-4 mt-2">
+                        <pi-button rounded="full" size="extra small">
+                            extra small
+                        </pi-button>
+                        <pi-button rounded="full" size="small">
+                            small
+                        </pi-button>
+                        <pi-button rounded="full">
+                            default
+                        </pi-button>
+                        <pi-button rounded="full" size="large">
+                            large
+                        </pi-button>
+                        <pi-button rounded="full" size="extra large">
+                            extra large
+                        </pi-button>
+                    </div>
+                    <p class="pt-4 space-x-2">
+                        <span>To mark a button as rounded add the </span>
+                        <pi-quick-code color="primary">rounded="full"</pi-quick-code> <span>property</span> .
+                    </p>
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-button rounded='full' size='small'>SUBMIT</pi-button>">
+                        <pi-code-fix>pi-button rounded="full" size="small"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-xl">Button Type</label>
+                    <div class="space-x-4">
+                        <pi-button type="success">
+                            success
+                        </pi-button>
+                        <pi-button type="primary">
+                            primary
+                        </pi-button>
+                        <pi-button  type="danger">
+                            danger
+                        </pi-button>
+                        <pi-button  type="warning">
+                            warning
+                        </pi-button>
+                    </div>
+                    <p class="pt-4 space-x-2">
+                        <span>The button supports four different types</span>
+                        <span class="space-x-2"><pi-quick-code color="primary">primary</pi-quick-code>
+                            <pi-quick-code color="danger">danger</pi-quick-code>
+                        <pi-quick-code color="warning">warning</pi-quick-code><br>
+                        <pi-quick-code color="success">success</pi-quick-code></span> .
+                    </p>
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-button type='danger'>SUBMIT</pi-button>">
+                        <pi-code-fix>pi-button type="danger"</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-xl">Button with Icon</label>
+                    <div class="flex space-x-4">
+                        <pi-button type="success">
+                            <span> success</span>
+                            <i class="pi pi-arrow-right"></i>
+                        </pi-button>
+                        <pi-button type="primary">
+                            <i class="pi pi-arrow-left"></i>
+                            <span>primary</span>
+                        </pi-button>
+                    </div>
+                    <p class="pt-4">
+                        Use the example to below to add an icon to a button
+                    </p>
+                    <br>
+                    <pi-code-snippet [canCopy]="false">
+                        <pi-code-fix>pi-button type="primary"</pi-code-fix>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<pi-code-fix>span</pi-code-fix>primary<pi-code-fix>/span</pi-code-fix>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<pi-code-fix>i class="pi pi-arrow-right"</pi-code-fix><pi-code-fix>/i</pi-code-fix>
+                        <br>
+                        <pi-code-fix>/pi-button</pi-code-fix>
+                        <br>
+                        <br>
+                        <pi-code-fix>pi-button type="success"</pi-code-fix>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<pi-code-fix>span</pi-code-fix>success<pi-code-fix>/span</pi-code-fix>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<pi-code-fix>i class="pi pi-arrow-left"</pi-code-fix><pi-code-fix>/i</pi-code-fix>
+                        <br>
+                        <pi-code-fix>/pi-button</pi-code-fix>
+
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-xl">Outline Buttons</label>
+                    <div class="space-x-4">
+                        <pi-button type="success" outline>
+                            outline
+                        </pi-button>
+                        <pi-button type="primary" outline>
+                            outline
+                        </pi-button>
+                        <pi-button  type="danger" outline="">
+                            outline
+                        </pi-button>
+                        <pi-button  type="warning" outline>
+                            outline
+                        </pi-button>
+                    </div>
+                    <p class="pt-4 space-x-2">
+                        <span>The outline property makes a button background transparent. To mark a button as outline add the </span>
+                        <pi-quick-code color="primary">outline</pi-quick-code> <span>property</span> .
+                    </p>
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-button type='info' outline>SUBMIT</pi-button>">
+                        <pi-code-fix>pi-button type="success" outline</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                        <br>
+                        <pi-code-fix>pi-button type="primary" outline</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-xl">Disabled Button</label>
+                    <div class="space-x-4">
+                        <pi-button disabled>
+                            SUBMIT
+                        </pi-button>
+                        <pi-button type="success" [disabled]="true">
+                            SUBMIT
+                        </pi-button>
+                        <pi-button type="danger" [disabled]="true">
+                            SUBMIT
+                        </pi-button>
+                        <pi-button type="warning" [disabled]="true">
+                            SUBMIT
+                        </pi-button>
+                    </div>
+                    <br>
+                    <div class="space-x-4">
+                        <pi-button outline disabled>
+                            SUBMIT
+                        </pi-button>
+                        <pi-button type="success" outline [disabled]="true">
+                            SUBMIT
+                        </pi-button>
+                        <pi-button type="danger" outline [disabled]="true">
+                            SUBMIT
+                        </pi-button>
+                        <pi-button type="warning" outline [disabled]="true">
+                            SUBMIT
+                        </pi-button>
+                    </div>
+                    <p class="pt-4 space-x-2">
+                        <span>To disable a button add the </span>
+                        <pi-quick-code color="primary">disabled</pi-quick-code> <span>property or set </span> <pi-quick-code color="primary">[disabled]="true"</pi-quick-code>
+                    </p>
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-button disabled>SUBMIT</pi-button>">
+                        <pi-code-fix>pi-button disabled</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-xl">Block Button</label>
+                    <div class="w-full">
+                        <pi-button block>
+                            SUBMIT
+                        </pi-button>
+                    </div>
+                    <p class="pt-4 space-x-2">
+                        <span>The block property makes a button fill the entire width of it's parent. To mark a button as block add the </span>
+                        <pi-quick-code color="primary">block</pi-quick-code> <span>property</span> .
+                    </p>
+                    <br>
+                    <pi-code-snippet textToCopy="<pi-button disabled=''>SUBMIT</pi-button>">
+                        <pi-code-fix>pi-button block</pi-code-fix>SUBMIT<pi-code-fix>/pi-button</pi-code-fix>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="relative w-auto">
+    <button [id]="id"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" pi-dropdown="pi-dropdown">
+        <span class="block truncate">{{(displayLabel) ? displayLabel : placeholder}}</span>
+        <i class="pi pi-chevron-down ml-2"></i>
+    </button>
+    <div class="absolute border mt-2 rounded-[5px] divide-y bg-white z-10 pi-droplist-container shadow-2xl {{id}} hidden" [ngStyle]="{'width': dropWidth +'px'}">
+        <ng-container *ngIf="data.length > 0">
+            <ng-container *ngFor="let item of data">
+                <div (click)="selectItem(item)" class="py-[8px] px-[12px] cursor-pointer hover:bg-gray-200" [class.bg-gray-200]="displayValue === item.id">
+                    <span class="text-[14px] leading-[16px] font-[400]">{{item.name}}</span>
+                </div>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="data.length === 0">
+            <div class="py-[8px] px-[12px] cursor-pointer text-center">
+                <span class="text-[14px] leading-[16px] font-[400]">List is empty</span>
+            </div>
+        </ng-container>
+    </div>
+</div>

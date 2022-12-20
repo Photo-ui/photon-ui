@@ -8,6 +8,7 @@ import {Component, ElementRef, Input, OnInit} from '@angular/core';
 export class CodeSnippetComponent implements OnInit {
   @Input() textToCopy = '';
   @Input() canCopy = true;
+  @Input() title = '';
   constructor() { }
 
   ngOnInit(): void {

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndexRoutingModule } from './index-routing.module';
 import { IndexComponent } from './index.component';
-import { SelectBoxComponent } from './select-box/select-box.component';
 import {UiComponentsModule} from "../ui-components/ui-components.module";
 import {ClipboardModule} from "@angular/cdk/clipboard";
 import { ImageSelectBoxComponent } from './image-select-box/image-select-box.component';
@@ -12,30 +11,30 @@ import {PiButtonModule} from "../ui-components/pi-button/pi-button.module";
 import {PiInputModule} from "../ui-components/pi-input/pi-input.module";
 import {PiCheckBoxModule} from "../ui-components/pi-check-box/pi-check-box.module";
 import { UiCheckListComponent } from './ui-check-list/ui-check-list.component';
-import { UiModalComponent } from './ui-modal/ui-modal.component';
-import { UiInputComponent } from './ui-input/ui-input.component';
 import {PiCheckListModule} from "../ui-components/pi-check-list/pi-check-list.module";
-import { UiButtonComponent } from './ui-button/ui-button.component';
 import {PiModalModule} from "../ui-components/pi-modal/pi-modal.module";
-import {CompModalComponent} from "./ui-modal/comp-modal/comp-modal.component";
-import { UiCarouselComponent } from './ui-carousel/ui-carousel.component';
-import { UiTextAreaComponent } from './ui-text-area/ui-text-area.component';
 import {PiTextAreaModule} from "../ui-components/pi-text-area/pi-text-area.module";
+import {OverlayModule} from "@angular/cdk/overlay";
+import {PiLoaderModule} from "../ui-components/pi-loader/pi-loader.module";
+import {PiDrawerModule} from "../ui-components/pi-drawer/pi-drawer.module";
+import {DrawerService} from "../ui-components/pi-drawer/drawer.service";
+import {PiImagePickerModule} from "../ui-components/pi-image-picker/pi-image-picker.module";
+import {NotificationService} from "../ui-components/pi-notification/notification.service";
+import {PiNotificationModule} from "../ui-components/pi-notification/pi-notification.module";
+import {PiDropdownModule} from "../ui-components/pi-dropdown/pi-dropdown.module";
+import {PiSelectListModule} from "../ui-components/pi-select-list/pi-select-list.module";
+import {PiCardModule} from "../ui-components/pi-card/pi-card.module";
+import {PiToggleModule} from "../ui-components/pi-toggle/pi-toggle.module";
+import {PiRatingsModule} from "../ui-components/pi-ratings/pi-ratings.module";
+import {PiIconButtonModule} from "../ui-components/pi-icon-button/pi-icon-button.module";
 
 
 @NgModule({
     declarations: [
         IndexComponent,
-        SelectBoxComponent,
         ImageSelectBoxComponent,
         DynamicFormsComponent,
-        UiCheckListComponent,
-        UiModalComponent,
-        UiInputComponent,
-        UiButtonComponent,
-        CompModalComponent,
-        UiCarouselComponent,
-        UiTextAreaComponent
+        UiCheckListComponent
     ],
     imports: [
         CommonModule,
@@ -48,7 +47,22 @@ import {PiTextAreaModule} from "../ui-components/pi-text-area/pi-text-area.modul
         PiCheckBoxModule,
         PiCheckListModule,
         PiModalModule,
-        PiTextAreaModule
+        PiTextAreaModule,
+        OverlayModule,
+        PiLoaderModule,
+        PiDrawerModule,
+        PiImagePickerModule,
+        PiNotificationModule,
+        PiDropdownModule,
+        PiSelectListModule,
+        PiCardModule,
+        PiToggleModule,
+        PiRatingsModule,
+        PiIconButtonModule
+    ],
+    providers: [
+        DrawerService,
+        NotificationService
     ]
 })
 export class IndexModule { }

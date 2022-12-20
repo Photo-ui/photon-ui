@@ -1,0 +1,29 @@
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Toggle</h1>
+    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
+        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+                <div class="w-full">
+                    <label class="pb-5 block text-2xl">Basic implementation</label>
+                    <div class="flex space-x-4">
+                        <pi-toggle [(ngModel)]="toggle"></pi-toggle>
+                    </div>
+                    <br>
+                    <p>
+                        Toggle value: {{toggle}}
+                    </p>
+                    <br>
+                    <pi-code-snippet [textToCopy]="service.textComp">
+                        <pre>
+                            {{service.textComp}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="col-span-3 grow h-full w-full overflow-auto">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="relative">
+    <button [id]="id"
+            class="text-white {{dropListColor()}} font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center" pi-drop-down="pi-dropdown">
+        {{label}}
+        <i class="pi pi-chevron-down ml-2"></i>
+    </button>
+    <div class="absolute border mt-2 rounded-[5px] divide-y bg-white z-10 pi-drop-list-container shadow-2xl {{id}} hidden" [ngStyle]="{'min-width': dropWidth+'px'}" >
+        <ng-container *ngIf="dropListTemplate">
+            <ng-container *ngTemplateOutlet="dropListTemplate"></ng-container>
+        </ng-container>
+    </div>
+</div>

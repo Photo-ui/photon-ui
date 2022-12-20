@@ -1,0 +1,76 @@
+<div class="bg-gradient-to-b from-cyan-400/20 to-pink-500/20 h-screen w-screen overflow-auto">
+    <div class="flex flex-col w-full h-full overflow-auto">
+        <app-header></app-header>
+        <div class="w-full grow h-full flex justify-center pt-[50px] overflow-auto">
+            <div class="grid grid-cols-12 w-4/6 flex flex-col h-full">
+                <div class="col-span-2">
+                    <div class="flex flex-col w-full h-full pl-4">
+                        <div class="grow h-full w-full overflow-auto">
+                            <ng-container *ngFor="let menu of service.menu">
+                                <div class="flex cursor-pointer w-full py-3 space-x-3 text-base hover:font-bold hover:text-slate-800 text-slate-600 group" routerLink="{{menu.path}}">
+                                    <div class="flex flex-col">
+                                        <div class="flex flex-wrap content-center h-full">
+                                            <i class="pi pi-check-circle group-hover:cursor-pointer"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex flex-wrap content-center h-full">
+                                        <label class="group-hover:cursor-pointer">{{menu.title}}</label>
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-10 grow h-full w-full overflow-auto">
+                    <div class="flex flex-col w-full h-full p-4 overflow-auto">
+                        <h1 class="font-extrabold text-4xl">Get Started</h1>
+                        <p class="p-2">
+                            TolleUI is a set of angular UI components.
+                        </p>
+                        <br>
+                        <h1 class="font-extrabold text-2xl">Download</h1>
+                        <p class="p-2">
+                            TolleUI is available on npm and you can add it to your existing application by running the following command.
+                            <br>
+                            TolleUI uses primeicons as it's icon library so you would have to install it too.
+                            <br>
+                            <pi-quick-code color="danger">* This project is still in it's early stages.</pi-quick-code>
+                        </p>
+                        <pi-code-snippet [canCopy]="false">
+                            npm install toll-ui
+                            <br>
+                            npm install primeicons --save
+                        </pi-code-snippet>
+                        <br>
+                        <h1 class="font-extrabold text-2xl">Import</h1>
+                        <p class="p-2">
+                            The components are configured as modules and each component is imported from <pi-quick-code color="primary">"toll-ui"</pi-quick-code>.
+                            <br>
+                            Below is how an import would look like
+                        </p>
+                        <pi-code-snippet [canCopy]="false">
+                            import &#123; PiButtonModule &#125; from "toll-ui"
+                        </pi-code-snippet>
+                        <br>
+                        <h1 class="font-extrabold text-2xl">Styles</h1>
+                        <p class="p-2">
+                            You have to apply two styling dependencies one for tolleUI and the other for primeicons <pi-quick-code color="danger">angular.json</pi-quick-code>
+                        </p>
+                        <pi-code-snippet title="angular.json" [canCopy]="false">
+                            "styles": [
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"src/styles.css",
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"node_modules/toll-ui/core/style.scss",
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"node_modules/primeicons/primeicons.css"
+                            <br>
+                            ],
+                        </pi-code-snippet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

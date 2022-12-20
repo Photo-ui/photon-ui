@@ -6,36 +6,64 @@ import { Injectable } from '@angular/core';
 export class IndexService {
 public menu = [
   {
-    path: '/button',
+    path  : '/get-started',
+    title: 'Get Started'
+  },
+  {
+    path: '/components/buttons',
     title: 'Button'
   },
   {
-    path: '/input',
+    path: '/components/icon-button',
+    title: 'Icon Button'
+  },
+  {
+    path: '/components/input',
     title: 'Input'
   },
   {
-    path: '/text-area',
+    path: '/components/text-area',
     title: 'Text Area'
   },
   {
-    path: '/select-box',
-    title: 'Select Box'
+    path: '/components/select-list',
+    title: 'Select List'
   },
   {
-    path: '/image-select-box',
-    title: 'Image Select Box'
+    path: '/components/check-box',
+    title: 'Check Box'
   },
   {
-    path: '/modal',
+    path: '/components/toggle',
+    title: 'Toggle'
+  },
+  {
+    path: '/components/drop-list',
+    title: 'Drop List'
+  },
+  {
+    path: '/components/modal',
     title: 'Modal'
   },
   {
-    path: '/check-list',
-    title: 'Check List'
+    path: '/components/drawer',
+    title: 'Drawer'
   },
   {
-    path: '/dynamic-forms',
-    title: 'Dynamic Forms'
+    path: '/components/loader',
+    title: 'Loader'
+  },
+  {
+    path: '/components/image-picker',
+    title: 'Image Picker'
+  },
+  {
+    path: '/components/avatar',
+    title: 'Avatar'
+  },
+  {
+    path: '/components/avatar-group',
+    title: 'Avatar Group'
   }
 ]
   constructor() { }
