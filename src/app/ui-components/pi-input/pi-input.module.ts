@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {InputComponent} from "./input/input.component";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { InputComponent } from './input/input.component';
+import {FormsModule} from "@angular/forms";
 
 
 
 @NgModule({
-  declarations: [InputComponent],
-    exports: [InputComponent],
+  declarations: [
+    InputComponent
+  ],
+  exports: [
+    InputComponent
+  ],
   imports: [
-      FormsModule,
-      ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class PiInputModule { }

@@ -16,6 +16,7 @@ import {UiIconButtonComponent} from "./ui-icon-button/ui-icon-button.component";
 import {GetStartedComponent} from "../get-started/get-started.component";
 import {UiAvatarComponent} from "./ui-avatar/ui-avatar.component";
 import {UiAvatarGroupComponent} from "./ui-avatar-group/ui-avatar-group.component";
+import {UiCalendarComponent} from "./ui-calendar/ui-calendar.component";
 
 const routes: Routes = [
   {
@@ -34,7 +35,7 @@ const routes: Routes = [
         component: UiInputComponent
       },
       {
-        path: 'text-area',
+        path: 'floating-label-text-area',
         component: UiTextAreaComponent
       },
       {
@@ -80,6 +81,10 @@ const routes: Routes = [
       {
         path: 'avatar-group',
         component: UiAvatarGroupComponent
+      },
+      {
+        path: 'calendar',
+        component: UiCalendarComponent
       }
     ]
   }

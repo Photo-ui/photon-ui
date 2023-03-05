@@ -1,0 +1,37 @@
+<div class="flex flex-col w-full h-full pb-4 overflow-auto">
+    <h1 class="text-3xl font-extrabold p-2">Calendar</h1>
+    <div class="flex flex-col h-full overflow-auto">
+        <div class="grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white dark:bg-gray-700 rounded-xl mt-3 w-full p-4 space-y-12">
+                <div class="w-full">
+                    <label class="pb-5 block text-2xl">Basic implementation</label>
+                    <div>
+                        <pi-calendar calendarType="full" [(ngModel)]="today" (ngModelChange)="getDate($event)"></pi-calendar>
+                    </div>
+                    <br>
+                    <pi-code-snippet [canCopy]="false">
+                        <pre>
+                            {{calBase}}
+                        </pre>
+                        <pre>
+                            {{calComp}}
+                        </pre>
+                    </pi-code-snippet>
+                </div>
+                <div class="w-full mt-4">
+                    <label class="pb-5 block text-2xl">Disable Past Dates</label>
+                    <div>
+                        <pi-calendar [disablePastDates]="true" [(ngModel)]="now" (ngModelChange)="getDate($event)"></pi-calendar>
+                    </div>
+                    <br>
+                    <pi-code-snippet [textToCopy]="calDisablePast">
+                        <pre>
+                            {{calDisablePast}}
+                        </pre>
+                    </pi-code-snippet>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

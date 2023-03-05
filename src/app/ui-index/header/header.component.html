@@ -1,10 +1,58 @@
-<div class="px-4 h-16 w-full flex items-center justify-between">
-    <div class="flex items-center space-x-1">
-        <a routerLink="/" class="font-extrabold text-3xl">tolle</a><span class="border font-semibold border-black text-xs px-1 rounded">UI</span>
-    </div>
-    <div class="flex items-center space-x-3">
-        <a routerLink="/get-started" class="pl-3">Get Started</a>
-        <a routerLink="/components" class="pl-3">Components</a>
-        <a href="https://github.com/TOLLESOFT/tollUI" class="pl-3"><i class="pi pi-github text-2xl"></i></a>
+<div class="lg:block max-lg:hidden w-full h-auto">
+    <div class="px-4 h-16 w-full flex items-center justify-between">
+        <div class="flex items-center space-x-1 dark:text-white">
+            <a routerLink="/" class="font-extrabold text-3xl">tolle</a>
+            <span class="border font-semibold border-black dark:border-white text-xs px-1 rounded">UI</span>
+            <div class="xl:hidden">
+                <i (click)="collapseMenu()" class="pi pi-bars text-lg cursor-pointer dark:text-white pl-2 cursor-pointer"></i>
+            </div>
+        </div>
+        <div class="flex items-center space-x-3 dark:text-white">
+            <a routerLink="/get-started" class="pl-3">Get Started</a>
+            <a routerLink="/components" class="pl-3">Components</a>
+            <a href="https://github.com/TOLLESOFT/tollUI" class="pl-3"><i class="pi pi-github text-2xl"></i></a>
+        </div>
     </div>
 </div>
+<div class="lg:hidden w-full h-auto">
+    <div class="w-full h-full flex items-center p-4 cursor-pointer" (click)="collapseMenu()">
+        <i class="pi pi-bars text-lg cursor-pointer dark:text-white"></i>
+    </div>
+</div>
+
+<ng-container *ngIf="collapse">
+    <div class="fixed inset-0 bg-gray-900/70 xl:hidden z-[99999999999]">
+        <div class="flex flex-col h-full w-[300px] bg-white dark:bg-gray-800">
+            <div class="h-auto w-full">
+                <div class="flex space-x-2 items-center px-4 py-4 w-full justify-between">
+                    <div class="flex items-center space-x-1 dark:text-white">
+                        <a routerLink="/" class="font-extrabold text-3xl">tolle</a>
+                        <span class="border font-semibold border-black dark:border-white text-xs px-1 rounded">UI</span>
+                    </div>
+                    <i class="pi pi-times text-lg cursor-pointer dark:text-white pl-2" (click)="collapseMenu()"></i>
+                </div>
+            </div>
+            <div class="grow h-full w-full overflow-auto pl-10">
+                <ng-container *ngFor="let menu of service.menu">
+                    <div class="flex cursor-pointer w-full py-2 space-x-3 text-base hover:font-bold hover:text-slate-800 text-slate-600 group" (click)="collapseMenu()" routerLink="{{menu.path}}">
+                        <div class="flex flex-col">
+                            <div class="flex flex-wrap content-center h-full">
+                                <i class="pi pi-check-circle dark:text-white group-hover:cursor-pointer"></i>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap content-center h-full">
+                            <label class="group-hover:cursor-pointer dark:text-white">{{menu.title}}</label>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="flex space-x-2 p-2 h-auto">
+                <div class="h-full flex flex-wrap content-center dark:text-white">
+                    <a href="https://github.com/TOLLESOFT/tollUI" class="pl-3"><i class="pi pi-github text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

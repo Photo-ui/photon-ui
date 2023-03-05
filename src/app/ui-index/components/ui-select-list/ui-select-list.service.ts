@@ -1,22 +1,21 @@
 import { Injectable } from '@angular/core';
-import {SearchItem} from "../../../ui-components/pi-select-list/search-item";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UiSelectListService {
-  list: SearchItem[] = [
+  list = [
     {
       id: 1,
-      value: 'John Doe'
+      name: 'John Doe'
     },
     {
       id: 2,
-      value: 'Sarah Conor'
+      name: 'Sarah Conor'
     },
     {
       id: 2,
-      value: 'Samuel Nimrod'
+      name: 'Samuel Nimrod'
     }
   ];
 

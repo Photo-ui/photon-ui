@@ -1,60 +1,83 @@
 <div class="flex flex-col w-full h-full pb-4 overflow-auto">
     <h1 class="text-3xl font-extrabold p-2">Input</h1>
-    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
-        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
-            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+    <div class="flex flex-col h-full overflow-auto">
+        <div class="grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white dark:bg-slate-700 rounded-xl mt-3 w-full p-4 space-y-12">
                 <div class="w-full">
-                    <div class="w-96">
+                    <div class="lg:w-96 w-full">
                         <label class="pb-5 block text-2xl">Basic implementation</label>
-                        <pi-input placeholder="First name">
-                            <label class="block mb-2 text-sm font-medium text-gray-900">First name</label>
-                        </pi-input>
+                        <pi-input label="First name" placeholder="First name"></pi-input>
                     </div>
                     <br>
-                    <pi-code-snippet textToCopy="<pi-input placeholder='First name'><label>First name</label></pi-input>">
-                <pre>
-<pi-code-fix>pi-input placeholder="First name"</pi-code-fix>
-    <pi-code-fix>label</pi-code-fix>First name<pi-code-fix>/label</pi-code-fix>
-<pi-code-fix>/pi-input</pi-code-fix>
-                </pre>
+                    <pi-code-snippet [textToCopy]="inp">
+                        <pre>
+                            {{inp}}
+                        </pre>
                     </pi-code-snippet>
                 </div>
                 <div class="w-full">
-                    <div>
-                        <label class="pb-5 block text-2xl">Inline Floating Label</label>
-                        <div class="w-96">
-                            <pi-input floatingLabel="inline" label="First Name">
-                            </pi-input>
+                    <div class="lg:w-96 w-full">
+                        <label class="pb-5 block text-2xl">Size</label>
+                        <div class="space-y-2">
+                            <div>
+                                <pi-input size="small" label="Small" placeholder="Small"></pi-input>
+                            </div>
+                            <div>
+                                <pi-input label="Default" placeholder="Default"></pi-input>
+                            </div>
+                            <div>
+                                <pi-input size="large" label="Large" placeholder="Large"></pi-input>
+                            </div>
                         </div>
                     </div>
-                    <p class="pt-4">
-                        To make the label float inline add the <pi-quick-code color="primary">floatingLabel</pi-quick-code> attribute and set the value to <pi-quick-code color="success">inline</pi-quick-code> this way <pi-quick-code color="danger">floatingLabel="inline"</pi-quick-code> .
+                    <p class="pt-4 space-x-2">
+                        <span>The input component supports three different sizes</span>
+                        <span class="space-x-2">
+                            <pi-quick-code color="primary">small</pi-quick-code>
+                            <pi-quick-code color="primary">normal</pi-quick-code>
+                            <pi-quick-code color="primary">large</pi-quick-code>
+                        </span>
                     </p>
                     <br>
-                    <pi-code-snippet textToCopy="<pi-input label='First Name' floatingLabel='inline'></pi-input>">
-                        <pi-code-fix>pi-input label="First Name" floatingLabel="inline"</pi-code-fix><pi-code-fix>/pi-input</pi-code-fix>
+                    <pi-code-snippet [textToCopy]="inputSizes">
+                        <pre>
+                            {{inputSizes}}
+                        </pre>
                     </pi-code-snippet>
                 </div>
-                <div class="w-full">
-                    <div>
-                        <label class="pb-5 block text-2xl">Outline Floating Label</label>
-                        <div class="w-96">
-                            <pi-input floatingLabel="outline" label="First Name">
-                            </pi-input>
-                        </div>
-                    </div>
-                    <p class="pt-4">
-                        To make the label float outline add the <pi-quick-code color="primary">floatingLabel</pi-quick-code> attribute and set the value to <pi-quick-code color="success">outline</pi-quick-code> this way <pi-quick-code color="danger">floatingLabel="outline"</pi-quick-code> .
-                    </p>
-                    <br>
-                    <pi-code-snippet textToCopy="<pi-input label='First Name' floatingLabel='outline'></pi-input>">
-                        <pi-code-fix>pi-input label="First Name" floatingLabel="outline"</pi-code-fix><pi-code-fix>/pi-input</pi-code-fix>
-                    </pi-code-snippet>
-                </div>
+<!--                <div class="w-full">-->
+<!--                    <div>-->
+<!--                        <label class="pb-5 block text-2xl">Inline Floating Label</label>-->
+<!--                        <div class="w-96">-->
+<!--                            <pi-input floatingLabel="inline" label="First Name">-->
+<!--                            </pi-input>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <p class="pt-4">-->
+<!--                        To make the label float inline add the <pi-quick-code color="primary">floatingLabel</pi-quick-code> attribute and set the value to <pi-quick-code color="success">inline</pi-quick-code> this way <pi-quick-code color="danger">floatingLabel="inline"</pi-quick-code> .-->
+<!--                    </p>-->
+<!--                    <br>-->
+<!--                    <pi-code-snippet textToCopy="<pi-input label='First Name' floatingLabel='inline'></pi-input>">-->
+<!--                        <pi-code-fix>pi-input label="First Name" floatingLabel="inline"</pi-code-fix><pi-code-fix>/pi-input</pi-code-fix>-->
+<!--                    </pi-code-snippet>-->
+<!--                </div>-->
+<!--                <div class="w-full">-->
+<!--                    <div>-->
+<!--                        <label class="pb-5 block text-2xl">Outline Floating Label</label>-->
+<!--                        <div class="w-96">-->
+<!--                            <pi-input floatingLabel="outline" label="First Name">-->
+<!--                            </pi-input>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <p class="pt-4">-->
+<!--                        To make the label float outline add the <pi-quick-code color="primary">floatingLabel</pi-quick-code> attribute and set the value to <pi-quick-code color="success">outline</pi-quick-code> this way <pi-quick-code color="danger">floatingLabel="outline"</pi-quick-code> .-->
+<!--                    </p>-->
+<!--                    <br>-->
+<!--                    <pi-code-snippet textToCopy="<pi-input label='First Name' floatingLabel='outline'></pi-input>">-->
+<!--                        <pi-code-fix>pi-input label="First Name" floatingLabel="outline"</pi-code-fix><pi-code-fix>/pi-input</pi-code-fix>-->
+<!--                    </pi-code-snippet>-->
+<!--                </div>-->
             </div>
-        </div>
-        <div class="col-span-3 grow h-full w-full overflow-auto">
-
         </div>
     </div>
 </div>

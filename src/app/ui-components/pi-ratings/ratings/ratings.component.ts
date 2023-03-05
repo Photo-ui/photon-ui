@@ -41,6 +41,7 @@ export class RatingsComponent implements OnInit, ControlValueAccessor {
   }
 
   setDisabledState(isDisabled: boolean): void {
+    this.disable = isDisabled;
   }
 
   writeValue(obj: number): void {

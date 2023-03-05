@@ -1,16 +1,16 @@
 <div class="flex flex-col w-full h-full pb-4 overflow-auto">
     <h1 class="text-3xl font-extrabold p-2">Select Box</h1>
-    <div class="grid grid-cols-12 flex flex-col h-full overflow-auto">
-        <div class="col-span-9 grow h-full w-full p-4 overflow-auto">
-            <div class="bg-white rounded-xl mt-3 w-full p-4 space-y-12">
+    <div class="flex flex-col h-full overflow-auto">
+        <div class="grow h-full w-full p-4 overflow-auto">
+            <div class="bg-white dark:bg-gray-700 rounded-xl mt-3 w-full p-4 space-y-12">
                 <div class="w-full">
                     <div class="w-96">
                         <label class="pb-5 block text-2xl">Basic implementation</label>
-                        <pi-select-list [showAddButton]="false" [(ngModel)]="item" (ngModelChange)="display()" [data]="service.list" placeholder="Search Names"></pi-select-list>
+                        <pi-select-list [showAddButton]="false" dataId="id" dataLabel="name" [(ngModel)]="item" (ngModelChange)="display()" [data]="service.list" placeholder="Search Names"></pi-select-list>
                     </div>
                     <br>
-                    <pi-code-snippet textToCopy="<pi-select-list [showAddButton]='false' [data]='list' placeholder='Search Names'></pi-select-list>">
-                        <pi-code-fix>pi-select-list [showAddButton]="false" [data]="list" placeholder="Search Names"</pi-code-fix> <pi-code-fix>/pi-select-list</pi-code-fix>
+                    <pi-code-snippet textToCopy="<pi-select-list dataId='id' dataLabel='name' [showAddButton]='false' [data]='list' placeholder='Search Names'></pi-select-list>">
+                        <pi-code-fix>pi-select-list dataId="id" dataLabel="name" [showAddButton]="false" [data]="list" placeholder="Search Names"</pi-code-fix> <pi-code-fix>/pi-select-list</pi-code-fix>
                     </pi-code-snippet>
                     <br>
                     <pi-code-snippet [canCopy]="false">
@@ -23,7 +23,7 @@
                     <div>
                         <label class="pb-5 block text-2xl">Search Implementation</label>
                         <div class="w-96">
-                            <pi-select-list [showAddButton]="false" [data]="service.list" placeholder="Search Names" [searchable]="true" [showIcon]="true"></pi-select-list>
+                            <pi-select-list [showAddButton]="false" dataId="id" dataLabel="name" [data]="service.list" placeholder="Search Names" [searchable]="true" [showIcon]="true"></pi-select-list>
                         </div>
                     </div>
                     <p class="pt-4">
@@ -33,15 +33,15 @@
                         This filters the <pi-quick-code color="primary">value</pi-quick-code> field of the <pi-quick-code color="primary">SearchItem class</pi-quick-code>
                     </p>
                     <br>
-                    <pi-code-snippet textToCopy="<pi-select-list [showAddButton]='false' [data]='list' placeholder='Search Names' [searchable]='true' [showIcon]='true'></pi-select-list>">
-                        <pi-code-fix>pi-select-list [showAddButton]="false" [data]="list" placeholder="Search Names" [searchable]="true" [showIcon]="true"</pi-code-fix> <pi-code-fix>/pi-select-list</pi-code-fix>
+                    <pi-code-snippet textToCopy="<pi-select-list dataId='id' dataLabel='name' [showAddButton]='false' [data]='list' placeholder='Search Names' [searchable]='true' [showIcon]='true'></pi-select-list>">
+                        <pi-code-fix>pi-select-list dataId="id" dataLabel="name" [showAddButton]="false" [data]="list" placeholder="Search Names" [searchable]="true" [showIcon]="true"</pi-code-fix> <pi-code-fix>/pi-select-list</pi-code-fix>
                     </pi-code-snippet>
                 </div>
                 <div class="w-full">
                     <div class="w-auto">
                         <label class="pb-5 block text-2xl">Search with Add New Implementation</label>
                         <div class="w-96">
-                            <pi-select-list [showAddButton]="true" [data]="service.list" placeholder="Search Names" [searchable]="true" [showIcon]="true"></pi-select-list>
+                            <pi-select-list [showAddButton]="true" dataId="id" dataLabel="name" [data]="service.list" placeholder="Search Names" [searchable]="true" [showIcon]="true"></pi-select-list>
                         </div>
                     </div>
                     <p class="pt-4">
@@ -51,29 +51,11 @@
                         This filters the <pi-quick-code color="primary">value</pi-quick-code> field of the <pi-quick-code color="primary">SearchItem class</pi-quick-code>
                     </p>
                     <br>
-                    <pi-code-snippet textToCopy="<pi-select-list [showAddButton]='false' [data]='list' placeholder='Search Names' [searchable]='true' [showIcon]='true'></pi-select-list>">
-                        <pi-code-fix>pi-select-list [showAddButton]="false" [data]="list" placeholder="Search Names" [searchable]="true" [showIcon]="true"</pi-code-fix> <pi-code-fix>/pi-select-list</pi-code-fix>
-                    </pi-code-snippet>
-                </div>
-                <div class="w-full">
-                    <div class="w-96">
-                        <label class="pb-5 block text-2xl">SearchItem <pi-quick-code color="success">class</pi-quick-code> </label>
-                    </div>
-                    <p class="pt-4">
-                        This is the structure of the list to be passed to the <pi-quick-code color="primary">&lt;pi-search-box&gt;</pi-quick-code>&nbsp;
-                        <pi-quick-code color="primary">[data]</pi-quick-code> property.
-                    </p>
-                    <br>
-                    <pi-code-snippet [canCopy]="false">
-                <pre>
-                    {{service.searchItemText}}
-                </pre>
+                    <pi-code-snippet textToCopy="<pi-select-list dataId='id' dataLabel='name' [showAddButton]='false' [data]='list' placeholder='Search Names' [searchable]='true' [showIcon]='true'></pi-select-list>">
+                        <pi-code-fix>pi-select-list dataId="id" dataLabel="name" [showAddButton]="false" [data]="list" placeholder="Search Names" [searchable]="true" [showIcon]="true"</pi-code-fix> <pi-code-fix>/pi-select-list</pi-code-fix>
                     </pi-code-snippet>
                 </div>
             </div>
-        </div>
-        <div class="col-span-3 grow h-full w-full overflow-auto">
-
         </div>
     </div>
 </div>

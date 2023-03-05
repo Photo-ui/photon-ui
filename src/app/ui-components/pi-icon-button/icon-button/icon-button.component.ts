@@ -9,9 +9,12 @@ export class IconButtonComponent implements OnInit, OnChanges {
   @Input() size: 'small' | 'normal' | 'large' = 'normal';
   @Input() type: 'primary' | 'success' | 'danger' | 'warning' = 'primary';
   @Input() rounded: '' | 'full' = '';
-  small = 'p-2.5 text-sm font-medium text-center';
-  normal = 'p-3 text-sm font-medium text-center';
-  large = 'p-3.5 text-base font-medium text-center';
+  @Input() piStyle: any;
+
+  @Input() piClass: any;
+  small = 'p-2.5 text-sm font-medium text-center inline-flex';
+  normal = 'p-3 text-sm font-medium text-center inline-flex';
+  large = 'p-3.5 text-base font-medium text-center inline-flex';
   primary = '';
   success = '';
   danger = '';

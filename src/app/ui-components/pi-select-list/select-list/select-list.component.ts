@@ -19,7 +19,11 @@ import {fromEvent} from "rxjs";
 export class SelectListComponent implements OnInit, ControlValueAccessor, AfterViewInit {
   @Input() id: string = BaseService.uuid();
   @Input() placeholder: string = '';
-  @Input() data: Array<SearchItem> = [];
+  @Input() label: string = '';
+  @Input() required: boolean = false;
+  @Input() invalid: boolean = false;
+  @Input() data: Array<any> = [];
+  transformedData: Array<SearchItem> = [];
   @Input() showAddButton = true;
   @Input() searchable = false;
   @Input() showIcon = false;
@@ -31,11 +35,24 @@ export class SelectListComponent implements OnInit, ControlValueAccessor, AfterV
   selectedItem?: SearchItem;
   displayLabel = '';
   displayValue: any;
+
+  @Input() size: 'small' | 'normal' | 'large' | undefined = 'normal'
+  defaultClass = 'bg-gray-50 focus:outline-none text-gray-900 rounded-lg block w-full dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white';
+  defaultSize = 'p-2.5 text-sm';
+  smallSize = 'p-2 sm:text-xs';
+  largeSize = 'p-4 sm:text-md';
+  inputValidClass = 'focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 border border-gray-400 dark:border-gray-500';
+  invalidClass = 'focus:ring-red-500 focus:border-red-500 dark:focus:ring-red-500 dark:focus:border-red-500 border border-red-500 dark:border-red-600'
+  @Input() dataLabel: any;
+  @Input() dataId: any;
   constructor() {
   }
 
   ngOnInit(): void {
     this.newList = this.data;
+    this.transformedData = this.data.map(u => {
+      return <SearchItem>{ id: u[this.dataId], value: u[this.dataLabel] }
+    })
   }
 
   selectItem(item: SearchItem) {

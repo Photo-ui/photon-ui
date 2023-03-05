@@ -22,7 +22,7 @@ public menu = [
     title: 'Input'
   },
   {
-    path: '/components/text-area',
+    path: '/components/floating-label-text-area',
     title: 'Text Area'
   },
   {
@@ -64,6 +64,10 @@ public menu = [
   {
     path: '/components/avatar-group',
     title: 'Avatar Group'
+  },
+  {
+    path: '/components/calendar',
+    title: 'Calendar'
   }
 ]
   constructor() { }

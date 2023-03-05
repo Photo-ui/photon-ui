@@ -7,9 +7,8 @@ import {UiButtonComponent} from "./ui-button/ui-button.component";
 import {UiComponentsModule} from "../../ui-components/ui-components.module";
 import {PiButtonModule} from "../../ui-components/pi-button/pi-button.module";
 import {UiInputComponent} from "./ui-input/ui-input.component";
-import {PiInputModule} from "../../ui-components/pi-input/pi-input.module";
 import {UiTextAreaComponent} from "./ui-text-area/ui-text-area.component";
-import {PiTextAreaModule} from "../../ui-components/pi-text-area/pi-text-area.module";
+import {PiFloatingLabelTextAreaModule} from "../../ui-components/pi-floating-label-text-area/pi-floating-label-text-area.module";
 import { UiSelectListComponent } from './ui-select-list/ui-select-list.component';
 import {PiSelectListModule} from "../../ui-components/pi-select-list/pi-select-list.module";
 import {FormsModule} from "@angular/forms";
@@ -40,6 +39,11 @@ import { UiAvatarComponent } from './ui-avatar/ui-avatar.component';
 import {PiAvatarModule} from "../../ui-components/pi-avatar/pi-avatar.module";
 import { UiAvatarGroupComponent } from './ui-avatar-group/ui-avatar-group.component';
 import {PiAvatarGroupModule} from "../../ui-components/pi-avatar-group/pi-avatar-group.module";
+import { UiCalendarComponent } from './ui-calendar/ui-calendar.component';
+import {PiCalendarModule} from "../../ui-components/pi-calendar/pi-calendar.module";
+import {PiFloatingLabelInputModule} from "../../ui-components/pi-floating-label-input/pi-floating-label-input.module";
+import {PiInputModule} from "../../ui-components/pi-input/pi-input.module";
+import {PiTextAreaModule} from "../../ui-components/pi-text-area/pi-text-area.module";
 
 
 @NgModule({
@@ -60,30 +64,34 @@ import {PiAvatarGroupModule} from "../../ui-components/pi-avatar-group/pi-avatar
       UiToggleComponent,
       UiIconButtonComponent,
       UiAvatarComponent,
-      UiAvatarGroupComponent
+      UiAvatarGroupComponent,
+      UiCalendarComponent
   ],
-  imports: [
-    CommonModule,
-    ComponentsRoutingModule,
-    UiComponentsModule,
-    PiButtonModule,
-    PiInputModule,
-    PiTextAreaModule,
-    PiSelectListModule,
-    FormsModule,
-    PiCheckBoxModule,
-    PiDropdownModule,
-    PiDropListModule,
-    PiModalModule,
-    PiDrawerModule,
-    PiLoaderModule,
-    PiImagePickerModule,
-    PiToggleModule,
-    PiIconButtonModule,
-    UiIndexModule,
-    PiAvatarModule,
-    PiAvatarGroupModule
-  ],
+    imports: [
+        CommonModule,
+        ComponentsRoutingModule,
+        UiComponentsModule,
+        PiButtonModule,
+        PiFloatingLabelInputModule,
+        PiFloatingLabelTextAreaModule,
+        PiSelectListModule,
+        FormsModule,
+        PiCheckBoxModule,
+        PiDropdownModule,
+        PiDropListModule,
+        PiModalModule,
+        PiDrawerModule,
+        PiLoaderModule,
+        PiImagePickerModule,
+        PiToggleModule,
+        PiIconButtonModule,
+        UiIndexModule,
+        PiAvatarModule,
+        PiAvatarGroupModule,
+        PiCalendarModule,
+        PiInputModule,
+        PiTextAreaModule
+    ],
   providers: [
     ModalService,
     DrawerService,

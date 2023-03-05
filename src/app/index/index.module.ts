@@ -8,12 +8,12 @@ import { ImageSelectBoxComponent } from './image-select-box/image-select-box.com
 import { DynamicFormsComponent } from './dynamic-forms/dynamic-forms.component';
 import {FormsModule} from "@angular/forms";
 import {PiButtonModule} from "../ui-components/pi-button/pi-button.module";
-import {PiInputModule} from "../ui-components/pi-input/pi-input.module";
+import {PiFloatingLabelInputModule} from "../ui-components/pi-floating-label-input/pi-floating-label-input.module";
 import {PiCheckBoxModule} from "../ui-components/pi-check-box/pi-check-box.module";
 import { UiCheckListComponent } from './ui-check-list/ui-check-list.component';
 import {PiCheckListModule} from "../ui-components/pi-check-list/pi-check-list.module";
 import {PiModalModule} from "../ui-components/pi-modal/pi-modal.module";
-import {PiTextAreaModule} from "../ui-components/pi-text-area/pi-text-area.module";
+import {PiFloatingLabelTextAreaModule} from "../ui-components/pi-floating-label-text-area/pi-floating-label-text-area.module";
 import {OverlayModule} from "@angular/cdk/overlay";
 import {PiLoaderModule} from "../ui-components/pi-loader/pi-loader.module";
 import {PiDrawerModule} from "../ui-components/pi-drawer/pi-drawer.module";
@@ -43,11 +43,11 @@ import {PiIconButtonModule} from "../ui-components/pi-icon-button/pi-icon-button
         FormsModule,
         UiComponentsModule,
         PiButtonModule,
-        PiInputModule,
+        PiFloatingLabelInputModule,
         PiCheckBoxModule,
         PiCheckListModule,
         PiModalModule,
-        PiTextAreaModule,
+        PiFloatingLabelTextAreaModule,
         OverlayModule,
         PiLoaderModule,
         PiDrawerModule,

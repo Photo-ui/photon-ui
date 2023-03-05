@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {IndexService} from "../../index/index.service";
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  collapse = false;
+  constructor(public service: IndexService) { }
 
   ngOnInit(): void {
   }
 
+  collapseMenu = () => {
+    this.collapse = !this.collapse;
+  }
 }

@@ -1,13 +1,13 @@
-<div class="bg-gradient-to-b from-cyan-400/20 to-pink-500/20 h-screen w-screen overflow-auto">
+<div class="bg-gradient-to-b from-cyan-400/20 to-pink-500/20 dark:from-slate-800 dark:to-gray-800 h-screen w-screen overflow-auto">
     <div class="flex flex-col w-full h-full overflow-auto">
        <app-header></app-header>
         <div class="w-full grow h-full flex justify-center pt-[50px] overflow-auto">
-            <div class="grid grid-cols-12 w-4/6 flex flex-col h-full">
-                <div class="col-span-2">
+            <div class="grid xl:grid-cols-12 xl:w-4/6 flex flex-col h-full">
+                <div class="xl:col-start-1 xl:col-span-3 xl:block max-xl:hidden">
                     <div class="flex flex-col w-full h-full pl-4">
                         <div class="grow h-full w-full overflow-auto">
                             <ng-container *ngFor="let menu of service.menu">
-                                <div class="flex cursor-pointer w-full py-2 space-x-3 text-base hover:font-bold hover:text-slate-800 text-slate-600 group" routerLink="{{menu.path}}">
+                                <div class="dark:text-white flex cursor-pointer w-full py-2 space-x-3 text-base hover:font-bold hover:text-slate-800 dark:hover:text-slate-400 text-slate-600 group" routerLink="{{menu.path}}">
                                     <div class="flex flex-col">
                                         <div class="flex flex-wrap content-center h-full">
                                             <i class="pi pi-check-circle group-hover:cursor-pointer"></i>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-10 grow h-full w-full overflow-auto">
+                <div class="xl:col-start-4 xl:col-span-9 grow h-full w-full overflow-auto dark:text-white">
                     <router-outlet></router-outlet>
                 </div>
             </div>
